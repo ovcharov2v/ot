@@ -1,0 +1,15 @@
+mixin promoCard(img, title)
+	// Promo card
+	.promo-card
+		if img
+			.promo-card__logo-box
+				img.promo-card__logo(src=img, alt)
+		h3.promo-card__title= title
+		p.promo-card__time
+			+svg("time-outline")(class="promo-card__time-icon")
+			|до 25 сентября 2025
+		p.promo-card__value Скидка - 5% на заказ!
+		if img
+			a.button.button--green.promo-card__btn(href="#") Скидка - 5% на заказ!
+		else
+			button.button.button--green.promo-card__btn.promo-card__btn--show(type="button", data-modal="modal-promo") Показать промокод

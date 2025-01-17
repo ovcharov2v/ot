@@ -1,0 +1,20 @@
+mixin centerCard(image, title, dataList)
+	-var iconList = ['online-learning', 'building', 'sale-broken', 'address-book', 'list']
+	// Center Card
+	.center-card
+		.center-card__top
+			.center-card__img-box
+				img.center-card__img(src=image, alt=name)
+			+rating()(class="rating--center-card center-card__rating")
+		h3.center-card__title= title
+		ul.center-card__data-list
+			each row, index in dataList
+				li.center-card__data__row(class=(index===0 || index===2 ? "center-card__data__row--underline" : ""))
+					+svg(iconList[index])(class="center-card__data-icon")
+					span.center-card__data-text= row
+		.center-card__button-box
+			a.button.button--gray.center-card__btn(href="#") Подробнее
+			a.button.button--violet.center-card__btn(href="#") На сайт УЦ
+
+
+

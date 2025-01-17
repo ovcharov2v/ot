@@ -1,0 +1,43 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Каталог учебных центров"
+
+prepend styles
+	link(rel="stylesheet" href!=`${baseDir}lib/vanilla-rangeslider/css/rangeslider.css"`)
+	link(rel="stylesheet" href!=`${baseDir}lib/slim-select/slimselect.css"`)
+
+prepend scripts
+	script(src!=`${baseDir}lib/vanilla-rangeslider/js/rangeslider.min.js`)
+	script(src!=`${baseDir}lib/slim-select/slimselect.min.js`)
+
+append scripts
+	script(src!=`${baseDir}js/filter.js`)
+	script(src!=`${baseDir}js/sort-select.js`)
+
+block content
+	+breadcrumb(['Главная'], 'Учебные центры')
+
+	.page.container
+		h1.heading2.page__title Учебные центры
+		.page__filter-layout
+			.page__filter
+				+filterCenters()
+			.page__content
+				.page__content-top
+					p.page__result-counter Найдено: 35 учебных центров
+					select.sort-select
+						option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-asc'></use></svg> <span>Рекомендованные</span>") Рекомендованные
+						option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-desc'></use></svg> <span>Не рекомендованные</span>") Не рекомендованные
+				.page__list
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+					+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+				button.button.button--gray.button--size-big.page__more-btn(type="button") Показать еще
+

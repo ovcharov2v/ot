@@ -1,0 +1,151 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Главная"
+
+block content
+	// Section Hero
+	section.section-hero.container
+		.section-hero__box
+			.section-hero__content-box
+				h1.heading1.section-hero__title Курсы по охране труда от ведущих учебных центров в одном месте
+				p.section-hero__text Профессиональный подход к обучению.
+					br
+					|Собрали для вас курсы ведущих учебных центров с подробными программами, актуальными ценами и отзывами.
+				ul.section-hero__nav
+					li.section-hero__nav-el
+						a.section-hero__nav-link(href="#")
+							+svg("sale-broken")(class="section-hero__nav-icon")
+							| Промокоды и скидки
+					li.section-hero__nav-el
+						a.section-hero__nav-link(href="#")
+							+svg("online-learning")(class="section-hero__nav-icon")
+							| Рекомендуемые курсы
+					li.section-hero__nav-el
+						a.section-hero__nav-link(href="#")
+							+svg("good-o")(class="section-hero__nav-icon")
+							| Популярные УЦ
+			.section-hero__img-box
+				img.section-hero__img(src="images/section-hero/img.svg", alt)
+
+	// Section Top Products
+	section.section-top-products.container
+		h2.heading2.section-top-products__title Популярные курсы и программы
+		.section-top-products__grid
+			+productCard([['ДО', 'green'],['ПК', 'violet'],['ПП', 'blue']], 'Авиатехник ГСМ')
+			+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ')
+			+productCard([['ПК', 'violet']], 'Обучение по дополнительной профессиональной программе повышения квалификации Специалист контрактной системы в сфере закупок по 223ФЗ')
+			+productCard([['ДО', 'green']], 'Мастер по наращиванию ресниц', false)
+			+productCard([['ПК', 'violet']], 'Обучение по дополнительной профессиональной программе повышения квалификации Специалист контрактной системы в сфере закупок по 223ФЗ')
+
+	// Section Directions
+	- var directionsList = ['Безопасность и охрана труда', 'Строительство и проектирование', 'Энергетика и экология', 'Транспорт и логистика', 'Технические направления', 'Управление и менеджмент']
+	section.section-directions.container
+		h2.heading2.section-directions__title Направления обучения
+		ul.section-directions__list
+			each direction in directionsList
+				li.section-directions__el
+					a.section-directions__link(href="#")= direction
+
+	// Section Top Webinars
+	section.section-top-webinars.container
+		h2.heading2.section-top-webinars__title Популярные вебинары
+		.section-top-webinars__grid
+			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+		.section-top-webinars__button-box
+			a.button.button--blue(href="#") Все вебинары
+
+	// Section Advantages
+	section.section-advantages.container
+		h2.heading2.section-advantages__title Мы создаем удобство для вас
+		.section-advantages__text-box
+			p.section-advantages__text Мы сделали выбор курсов по охране труда простым, надежным и выгодным. Доверьтесь профессионалам!
+			a.button.button--blue(href="#") Перейти в каталог
+		.section-advantages__grid
+			// Card
+			.section-advantages__card
+				.section-advantages__icon-box.section-advantages__icon-box--green
+					+svg("asterisk")(class="section-advantages__icon")
+				h3.section-advantages__card-title Всегда актуальная информация
+				p.section-advantages__card-text Данные о курсах, учебных центрах и программах обучения регулярно обновляются.
+			// Card
+			.section-advantages__card
+				.section-advantages__icon-box.section-advantages__icon-box--violet
+					+svg("asterisk")(class="section-advantages__icon")
+				h3.section-advantages__card-title Реальные отзывы
+					br
+					|учеников
+				p.section-advantages__card-text Честные отзывы тех, кто уже прошел обучение, помогут сделать правильный выбор.
+			// Card
+			.section-advantages__card
+				.section-advantages__icon-box.section-advantages__icon-box--blue
+					+svg("asterisk")(class="section-advantages__icon")
+				h3.section-advantages__card-title Проверенные учебные центры
+				p.section-advantages__card-text Собираем только надежные курсы от авторитетных учебных центров.
+			// Card
+			.section-advantages__card
+				.section-advantages__icon-box.section-advantages__icon-box--red
+					+svg("asterisk")(class="section-advantages__icon")
+				h3.section-advantages__card-title Акции и выгодные предложения
+				p.section-advantages__card-text Доступ к скидкам, специальным промокодам и акциям для экономии.
+
+	// Section Digits
+	section.section-digits.container
+		h2.heading2.section-digits__title Цифры говорят за нас
+		.section-digits__grid
+			// Card
+			figure.section-digits__card
+				.section-digits__icon-box.section-digits__icon-box--green
+					+svg("online-learning")(class="section-digits__icon")
+				figcaption.section-digits__card-text
+					span.section-digits__card-value 12987
+					| курсов собрано на сайте
+			// Card
+			figure.section-digits__card
+				.section-digits__icon-box.section-digits__icon-box--violet
+					+svg("search")(class="section-digits__icon")
+				figcaption.section-digits__card-text
+					span.section-digits__card-value 42354
+					| слушателей нашли свой курс через нас
+			// Card
+			figure.section-digits__card
+				.section-digits__icon-box.section-digits__icon-box--blue
+					+svg("briefcase")(class="section-digits__icon")
+				figcaption.section-digits__card-text
+					span.section-digits__card-value 305
+					| учебных центров сотрудничают с нами
+			// Card
+			figure.section-digits__card
+				.section-digits__icon-box.section-digits__icon-box--red
+					+svg("good-o")(class="section-digits__icon")
+				figcaption.section-digits__card-text
+					span.section-digits__card-value 98757
+					| реальных отзывов об учебных центрах
+
+	// Section Top Services
+	section.section-top-services.container
+		h2.heading2.section-top-services__title Популярные услуги
+		.section-top-services__grid
+			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
+			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
+			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
+			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
+			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
+		.section-top-services__button-box
+			a.button.button--blue(href="#") Все услуги
+
+	// Section op Centers
+	section.section-top-centers.container
+		h2.heading2.section-top-centers__title Популярные учебные центры
+		.section-top-centers__grid
+			+centerCard("images/centers/logo1.png", "Novatika", ['1500 курсов', 'ООО «Новатика»', 'Есть промокоды', '3328022191', '№ Л035-01297-33/00233560 от 25.02.2022 г.'])
+			+centerCard("images/centers/logo2.png", "Московский Институт Психологии", ['68 курсов', 'НАНО «Московский институт психологии»', 'Есть промокоды', '3328022191', '№041221 от 30.12.2020г.'])
+			+centerCard("images/centers/logo3.png", "Алгоритмика", ['15 курсов', 'ООО «Алгоритмика»', 'Есть промокоды', '3328022191', '№041369 от 15.04.2021г.'])
+			+centerCard("images/centers/logo4.png", "Skysmart", ['92 курса', 'ОАНО ДПО «СКАЕНГ»', 'Нет промокодов', '3328022191', '№Л035-01298-77/00181469 от 06.08.2019г.'])
+		.section-top-centers__button-box
+			a.button.button--blue(href="#") Все учебные центры

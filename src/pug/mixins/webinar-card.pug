@@ -1,0 +1,10 @@
+mixin webinar(image, title, withRating=true)
+	// Webinar card
+	.webinar-card
+		.webinar-card__img-box
+			img.webinar-card__img(src=image, alt)
+		h3.webinar-card__title= title
+		.webinar-card__rating-box
+			img.webinar-card__logo(src="images/centers/logo1.png", alt)
+			+rating()(class="webinar-card__rating")
+		a.button.button--violet.webinar-card__btn(href="#") Смотреть вебинар

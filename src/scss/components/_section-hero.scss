@@ -1,0 +1,61 @@
+.section-hero {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__box {
+		@include main-shadow;
+		display: flex;
+		justify-content: space-between;
+		gap: 32px;
+		padding: 30px 40px 40px 50px;
+		border-radius: 10px;
+	}
+
+	&__content-box {
+		max-width: 760px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		max-width: 600px;
+		margin-bottom: 32px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	&__nav-el {
+	}
+
+	&__nav-link {
+		@include main-shadow;
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 10px 16px;
+		border-radius: 6px;
+		font-size: 16px;
+		line-height: 20px;
+		white-space: nowrap;
+	}
+
+	&__nav-icon {
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+
+	&__img-box {
+	}
+
+	&__img {
+	}
+}

@@ -1,0 +1,55 @@
+.promo-card {
+	@include main-shadow;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px 30px;
+	border-radius: 6px;
+
+	&__logo-box {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+
+	&__logo {
+		display: block;
+		height: 45px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 700;
+	}
+
+	&__time {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 8px;
+		font-size: 16px;
+		line-height: 20px;
+		color:#5A5A5A;
+	}
+
+	&__time-icon {
+		flex-shrink: 0;
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+
+	&__value {
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__btn {
+		width: 100%;
+
+		&--show {
+			margin-top: 18px;
+		}
+	}
+}

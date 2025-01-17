@@ -1,0 +1,82 @@
+mixin menuCourses()
+	// Menu Courses
+	#courses-menu.menu
+		.container.menu__container
+			.menu__top
+				.nav-slider.menu__nav-slider
+					.swiper.nav-slider__el(data-cols="6", data-slave="courses-nav-slider")
+						.swiper-wrapper
+							.swiper-slide.nav-slider__slide.nav-slider__slide--active(data-slide="0") Безопасность и охрана труда
+							.swiper-slide.nav-slider__slide(data-slide="1") Строительство и проектирование
+							.swiper-slide.nav-slider__slide(data-slide="2") Энергетика и экология
+							.swiper-slide.nav-slider__slide(data-slide="3") Транспорт и логистика
+							.swiper-slide.nav-slider__slide(data-slide="4") Технические направления
+							.swiper-slide.nav-slider__slide(data-slide="5") Управление и менеджмент
+					.nav-slider__btn-box
+						button.nav-slider__btn.nav-slider__btn--prev(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+						button.nav-slider__btn.nav-slider__btn--next(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+			#courses-nav-slider.swiper.menu__content-slider
+				.swiper-wrapper
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Безопасность и охрана труда
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link.menu__link--active(href="#") Охрана труда
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+								a.menu__link(href="#") Антитеррористическая безопасность
+								a.menu__link(href="#") Работы повышенной опасности
+								a.menu__link(href="#") Первая помощь
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Строительство и проектирование
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Антитеррористическая безопасность
+								a.menu__link(href="#") Работы повышенной опасности
+								a.menu__link(href="#") Первая помощь
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Энергетика и экология
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Транспорт и логистика
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Охрана труда
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Технические направления
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Управление и менеджмент
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Охрана труда
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+								a.menu__link(href="#") Антитеррористическая безопасность
+								a.menu__link(href="#") Работы повышенной опасности
+								a.menu__link(href="#") Первая помощь

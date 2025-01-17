@@ -1,0 +1,42 @@
+.range-slider {
+	&__input {
+		display: none;
+	}
+
+	&__label {
+		margin-bottom: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 500;
+	}
+
+	.irs {
+		height: 20px;
+	}
+
+	.irs-line {
+		top: 12px;
+		height: 5px;
+	}
+
+	.irs-bar {
+		top: 12px;
+		height: 5px;
+		background-color: #D1D1D1;
+	}
+
+	.irs-handle {
+		display: block;
+		top: 6px;
+		width: 17px;
+		height: 17px;
+		border-radius: 17px;
+		border: 1px solid #3D4B88;
+		background-color: #fff;
+		cursor: pointer;
+
+		i {
+			display: none !important;
+		}
+	}
+}

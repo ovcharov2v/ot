@@ -1,0 +1,79 @@
+mixin menuServices()
+	// Menu Services
+	#services-menu.menu
+		.container.menu__container
+			.menu__top
+				.nav-slider.menu__nav-slider
+					.swiper.nav-slider__el(data-cols="5", data-slave="services-nav-slider")
+						.swiper-wrapper
+							.swiper-slide.nav-slider__slide.nav-slider__slide--active(data-slide="0") Организация системы охраны труда
+							.swiper-slide.nav-slider__slide(data-slide="1") СОУТ
+							.swiper-slide.nav-slider__slide(data-slide="2") Аудит и консалтинг в области охраны труда
+							.swiper-slide.nav-slider__slide(data-slide="3") Пожарная безопасность
+							.swiper-slide.nav-slider__slide(data-slide="4") Экологическая безопасность
+							.swiper-slide.nav-slider__slide(data-slide="5") СОУТ
+					.nav-slider__btn-box
+						button.nav-slider__btn.nav-slider__btn--prev(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+						button.nav-slider__btn.nav-slider__btn--next(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+			#services-nav-slider.swiper.menu__content-slider
+				.swiper-wrapper
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Организация системы охраны труда
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link.menu__link--active(href="#") Разработка и внедрение системы управления охраной труда (СУОТ)
+								a.menu__link(href="#") Проведение аттестации рабочих мест по условиям труда (СОУТ)
+								a.menu__link(href="#") Разработка и актуализация локальных нормативных актов
+								a.menu__link(href="#") Обучение персонала основам охраны труда
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title СОУТ
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Антитеррористическая безопасность
+								a.menu__link(href="#") Работы повышенной опасности
+								a.menu__link(href="#") Первая помощь
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Аудит и консалтинг в области охраны труда
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title Пожарная безопасность
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Охрана труда
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title ТЭкологическая безопасность
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+					.swiper-slide
+						.menu__content-slide
+							.menu__title-box
+								p.heading3.menu__title СОУТ
+								a.menu__title-link(href="#") Перейти в раздел
+							.menu__links-list
+								a.menu__link(href="#") Охрана труда
+								a.menu__link(href="#") Промышленная безопасность
+								a.menu__link(href="#") Пожарная безопасность
+								a.menu__link(href="#") Радиационная безопасность
+								a.menu__link(href="#") Антитеррористическая безопасность
+								a.menu__link(href="#") Работы повышенной опасности
+								a.menu__link(href="#") Первая помощь

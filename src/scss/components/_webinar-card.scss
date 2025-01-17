@@ -1,0 +1,48 @@
+.webinar-card {
+	@include main-shadow;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px 30px;
+	border-radius: 6px;
+
+	&__img-box {
+		aspect-ratio: 3.67;
+		margin-bottom: 10px;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&__rating-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		margin-top: auto;
+		margin-bottom: 20px;
+	}
+
+	&__logo {
+		display: block;
+		width: 100%;
+		max-width: 180px;
+	}
+
+	&__rating {
+	}
+
+	&__btn {
+		width: 100%;
+	}
+}

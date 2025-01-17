@@ -1,0 +1,28 @@
+.breadcrumb {
+	padding-top: 50px;
+	padding-bottom: 30px;
+
+	&__list {
+		display: flex;
+		font-size: 12px;
+		line-height: 15px;
+		font-weight: 500;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			&::after {
+				display: inline-block;
+				font-family: $font-secondary;
+				margin: 0 10px;
+				content: "—";
+			}
+		}
+	}
+
+	&__link {
+	}
+
+	&__current {
+	}
+}

@@ -1,0 +1,30 @@
+mixin reviewCard()
+	// Review card
+	.review-card
+		.review-card__top
+			p.review-card__name Светлана
+			time.review-card__time 21.11.2024
+		.review-card__stars-box
+			.review-card__stars
+				+svg("rating-star")(class="review-card__star")
+				+svg("rating-star")(class="review-card__star")
+				+svg("rating-star")(class="review-card__star")
+				+svg("rating-star")(class="review-card__star")
+				+svg("rating-star-half")(class="review-card__star")
+			.review-card__stars-value 5 / 5
+		.review-card__content
+			p.review-card__title Профессиональные преподаватели
+			.review-card__text-box
+				p Недавно мои сотрудники ЧОПа проходили обучение по первой помощи пострадавшим. Говорят, что преподаватели опытные и знающие свое дело, вроде даже имели опыт работы в МЧС. Досконально рассказали всю теорию и как действовать при той или иной ситуации и отрабатывали уже на манекенах. Стоит отметить еще гибкое ценообразование. За обучение 8 сотрудников дали скидку 8%, у других таких ценовых предложений не видел. Планирую в будущем отправить своих сотрудников на повышение квалификации по антитеррористическая безопасность на объектах
+		.review-card__bottom
+			.review-card__bottom-col
+				p.review-card__bottom-title
+					+svg("plus")(class="review-card__bottom-icon")
+					| Плюсы:
+				p.review-card__bottom-text Опытные преподаватели, дали скидку
+			.review-card__bottom-col
+				p.review-card__bottom-title
+					+svg("minus")(class="review-card__bottom-icon")
+					| Минусы:
+				p.review-card__bottom-text Нет
+

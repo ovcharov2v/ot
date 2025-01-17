@@ -1,2 +1,105 @@
 .footer {
+	&__nav-box {
+		padding-top: 30px;
+		padding-bottom: 86px;
+		background-color: #333;
+		color: #fff;
+	}
+
+	&__nav-container {
+		display: flex;
+		justify-content: space-between;
+		gap: 50px;
+	}
+
+	&__nav-group {
+		display: grid;
+		grid-template: auto / repeat(3, minmax(0, 250px));
+		grid-gap: 50px
+	}
+
+	&__text-box {
+		max-width: 315px;
+	}
+
+	&__logo-box {
+		display: inline-block;
+		margin-bottom: 22px;
+	}
+
+	&__logo {
+		display: block;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		font-size: 11px;
+		line-height: 13px;
+		color: #8D8D8D;
+	}
+
+	&__nav-title {
+		margin-bottom: 12px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	&__nav-el {
+	}
+
+	&__nav-link {
+		font-size: 14px;
+		line-height: 17px;
+		color: #BFBFBF;
+		transition: color $transition-default;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&__bottom {
+		padding-top: 12px;
+		padding-bottom: 24px;
+		background-color: #262626;
+	}
+
+	&__bottom-nav-box {
+		display: flex;
+		justify-content: space-between;
+		gap: 50px;
+		margin-bottom: 10px;
+	}
+
+	&__bottom-nav {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__bottom-nav-el {
+	}
+
+	&__bottom-nav-link {
+		font-size: 11px;
+		line-height: 13px;
+		font-weight: 500;
+		color: #fff;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__copyright {
+		font-size: 11px;
+		line-height: 13px;
+		color: #8D8D8D;
+	}
 }

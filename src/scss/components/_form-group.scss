@@ -1,0 +1,23 @@
+.form-group {
+	&__label {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 600;
+	}
+
+	&__input {
+		width: 100%;
+
+		&.ss-main {
+			display: flex;
+			padding-right: 8px;
+		}
+	}
+
+	textarea.form-group__input {
+		height: 110px;
+		resize: none;
+	}
+}

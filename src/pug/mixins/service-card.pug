@@ -1,0 +1,23 @@
+mixin serviceCard(labelListFirst, title, labelListSecond)
+	// Service card
+	article.service-card
+		.service-card__description-box
+			.service-card__description
+				ul.service-card__label-list
+					each label in labelListFirst
+						li.label(class="label--" + label[1])= label[0]
+				h3.service-card__title=title
+				ul.service-card__label-list
+					each label in labelListSecond
+						li.label(class="label--" + label[1])= label[0]
+				span.service-card__new-price от 5 999 р. / раб. мест.
+			.service-card__rating-box
+				img.service-card__logo(src="images/centers/logo1.png", alt)
+				+rating()(class="service-card__rating")
+		.service-card__bottom-box
+			.service-card__action-list
+				button.service-card__action
+					+svg("favorite")(class="service-card__action-icon")
+				button.service-card__action
+					+svg("compare")(class="service-card__action-icon")
+				a.button.button--blue.service-card__action-btn(href="#") Услуга на сайте УЦ

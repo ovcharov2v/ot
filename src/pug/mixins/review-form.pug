@@ -1,0 +1,50 @@
+mixin reviewForm()
+	// Review form
+	section.review-form
+		.container
+			.review-form__box
+				h2.heading2.review-form__title Добавить отзыв об этом учебном центре
+				p.review-form__description Мы принимаем только реальные отзывы. Все отзывы проверяются представителями школ и ваш отзыв не будет одобрен, если вы не проходили обучение.
+					|
+					|
+					a.review-form__description-link(href="#") Как проверяются отзывы?
+				form.review-form__form
+					.review-form__row
+						.form-group
+							label.form-group__label(for="name") ФИО (то, на которое был куплен курс):
+							input.input.form-group__input(type="text", placeholder="Скворцов Иван Олегович", name="name")
+						.form-group
+							label.form-group__label(for="title") Заголовок отзыва:
+							input.input.form-group__input(type="text", placeholder="Программа хорошая", name="title")
+					.form-group
+						label.form-group__label(for="text") Текст отзыва
+						textarea.input.form-group__input(placeholder="Все было полезно, программа простая для понимания, особенно для новичков...", name="text")
+					.review-form__row
+						.form-group
+							label.form-group__label(for="email") E-mail:
+							input.input.form-group__input(type="email", placeholder="ivan123@mail.ru", name="email")
+						.form-group
+							label.form-group__label(for="rating") Ваша оценка:
+							select.input.form-group__input(name="rating")
+								option Плохо
+								option Нормально
+								option Средне
+								option Хорошо
+					.review-form__row
+						.form-group
+							label.form-group__label(for="plus") Плюсы:
+							textarea.input.form-group__input(placeholder="Программа насыщенная, без воды", name="plus")
+						.form-group
+							label.form-group__label(for="minus") Минусы:
+							textarea.input.form-group__input(placeholder="Уроки слишком интенсивные", name="minus")
+					label.radio.radio--big.review-form__agree
+						input.radio__input(type="checkbox", name="agree")
+						span.radio__text Даю согласие на обработку моих
+							|
+							|
+							a.radio__link(href="#", target="_blank") персональных данных
+							|
+							| и соглашаюсь с
+							|
+							a.radio__link(href="#", target="_blank") пользовательским соглашением
+					button.button.button--blue.review-form__btn(type="submit") Отправить

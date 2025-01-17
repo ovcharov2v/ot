@@ -1,0 +1,34 @@
+mixin productCard(labelList, title, withDiscount=true, withRating=true)
+	// Product card
+	article.product-card
+		.product-card__description-box
+			.product-card__description
+				.product-card__label-box
+					ul.product-card__label-list
+						each label in labelList
+							li.label(class="label--"+label[1])= label[0]
+					p.product-card__duration Длительность: 72 часа
+				h3.product-card__title=title
+				.product-card__price-box
+					if withDiscount
+						span.product-card__old-price 60 434 р./курс
+					span.product-card__new-price 10 999 р./курс
+			if	withRating
+				.product-card__rating-box
+					img.product-card__logo(src="images/centers/logo1.png", alt)
+					+rating()(class="product-card__rating")
+		.product-card__bottom-box
+			ul.product-card__info-list
+				if withDiscount
+					li.product-card__info
+						| Скидка
+						span.product-card__info-value 90%
+				li.product-card__info
+					| Промокоды
+					span.product-card__info-value 4 шт.
+			.product-card__action-list
+				button.product-card__action
+					+svg("favorite")(class="product-card__action-icon")
+				button.product-card__action
+					+svg("compare")(class="product-card__action-icon")
+				a.button.button--blue.product-card__action-btn(href="#") Курс на сайте УЦ

@@ -1,0 +1,44 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Каталог Промокоды"
+
+prepend styles
+	link(rel="stylesheet" href!=`${baseDir}lib/vanilla-rangeslider/css/rangeslider.css"`)
+	link(rel="stylesheet" href!=`${baseDir}lib/slim-select/slimselect.css"`)
+
+prepend scripts
+	script(src!=`${baseDir}lib/vanilla-rangeslider/js/rangeslider.min.js`)
+	script(src!=`${baseDir}lib/slim-select/slimselect.min.js`)
+
+append scripts
+	script(src!=`${baseDir}js/filter.js`)
+	script(src!=`${baseDir}js/sort-select.js`)
+
+block content
+	+breadcrumb(['Главная'], 'Промокоды')
+
+	.page.container
+		h1.heading2.page__title Промокоды
+		.page__promocard-grid
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+			+promoCard("images/centers/logo1.png", "Скидка в Новатике!")
+		button.button.button--gray.button--size-big.page__more-btn(type="button") Показать еще
+

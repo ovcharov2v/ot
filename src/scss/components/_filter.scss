@@ -1,0 +1,55 @@
+.filter {
+	&__search {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	&__group {
+		margin-bottom: 16px;
+	}
+
+	&__group-top {
+		position: relative;
+		display: inline-block;
+		padding: 0 30px 0 0;
+		margin-bottom: 10px;
+		border: none;
+		background-color: transparent;
+		text-align: left;
+	}
+
+	&__group-top-text {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__group-arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 20px;
+		height: 20px;
+		transition: transform $transition-default;
+
+		.filter__group--expanded & {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__group-list {
+		display: none;
+		flex-direction: column;
+		gap: 4px;
+
+		.filter__group--expanded & {
+			display: flex;
+		}
+	}
+
+	&__group-el {
+	}
+}

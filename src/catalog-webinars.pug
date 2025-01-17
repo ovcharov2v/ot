@@ -1,0 +1,40 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Каталог Вебинары"
+
+prepend styles
+	link(rel="stylesheet" href!=`${baseDir}lib/vanilla-rangeslider/css/rangeslider.css"`)
+	link(rel="stylesheet" href!=`${baseDir}lib/slim-select/slimselect.css"`)
+
+prepend scripts
+	script(src!=`${baseDir}lib/vanilla-rangeslider/js/rangeslider.min.js`)
+	script(src!=`${baseDir}lib/slim-select/slimselect.min.js`)
+
+append scripts
+	script(src!=`${baseDir}js/filter.js`)
+	script(src!=`${baseDir}js/sort-select.js`)
+
+block content
+	+breadcrumb(['Главная'], 'Вебинары')
+
+	.page.container
+		h1.heading2.page__title Вебинары
+		h2.page__group-title.heading3 Ближайшие вебинары
+		.page__webinars-grid
+			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+			+webinar("images/webinars/img2.jpg", "Изменения по охране труда с 1 сентября 2024 года. Практические рекомендации.")
+			+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+		h2.page__group-title.heading3 Ближайшие вебинары
+		.page__webinars-grid
+			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+			+webinar("images/webinars/img2.jpg", "Изменения по охране труда с 1 сентября 2024 года. Практические рекомендации.")
+			+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+			+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+			+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+			+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+		button.button.button--gray.button--size-big.page__more-btn(type="button") Показать еще
+

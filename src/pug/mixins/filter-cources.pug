@@ -1,0 +1,85 @@
+mixin filterCources()
+	// Filter
+	form.filter
+		input.input.filter__search(type="text", placeholder="Поиск...")
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Вид обучения
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Повышение квалификации
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Профессиональная переподготовка
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Дополнительно образование
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Цена
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Все курсы
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Со скидкой
+						span.radio__counter (6)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Бесплатные
+						span.radio__counter (0)
+				// Range slider
+				.range-slider.filter__group-el
+					p.range-slider__label От
+						|
+						|
+						span.range-slider__label-from 2 999
+						|
+						| до
+						|
+						span.range-slider__label-to 218 389
+						|
+						| руб.
+					input.range-slider__input(type="text", data-min="2999", data-max="218389")
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Длительность
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				.range-slider.filter__group-el
+					p.range-slider__label От
+						|
+						|
+						span.range-slider__label-from 16
+						|
+						| до
+						|
+						span.range-slider__label-to 265
+						|
+						| часов
+					input.range-slider__input(type="text", data-min="16", data-max="265")
+
+
+

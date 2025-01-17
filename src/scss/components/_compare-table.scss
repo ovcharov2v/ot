@@ -1,0 +1,113 @@
+.compare-table {
+	width: 100%;
+	overflow-x: auto;
+
+	&__el {
+	}
+
+	tr {
+		&:first-child {
+			td:nth-child(1) {
+				border-top-left-radius: 6px;
+			}
+
+			td:last-child {
+				border-top-right-radius: 6px;
+			}
+		}
+
+		&:last-child {
+			td:nth-child(2) {
+				border-bottom-left-radius: 6px;
+			}
+
+			td:last-child {
+				border-bottom-right-radius: 6px;
+			}
+		}
+
+		td {
+			width: 1005px;
+			max-width: 315px;
+			padding: 20px;
+
+			border: 1px solid #E1E1E1;
+
+			&:nth-child(1) {
+				border: none;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 600;
+		color: #B6B6B6;
+	}
+
+	&__value {
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	&__old-price {
+		margin-bottom: 2px;
+		font-size: 12px;
+		line-height: 15px;
+		color: #929292;
+		text-decoration: line-through;
+	}
+
+	&__price {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__link {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	&__action-box {
+		display: flex;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	&__action {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 36px;
+		height: 36px;
+		border: none;
+		border-radius: 40px;
+		transition: background-color $transition-default, color $transition-default;
+
+		&--green {
+			background-color: #E7F7EC;
+			color: #00867A;
+
+			&:hover {
+				background-color: darken(#E7F7EC, 10%);
+			}
+		}
+
+		&--red {
+			background-color: #F7E7E7;
+			color: #860000;
+
+			&:hover {
+				background-color: darken(#F7E7E7, 10%);
+			}
+		}
+	}
+
+	&__action-icon {
+		display: block;
+		width: 22px;
+		height: 22px;
+	}
+}

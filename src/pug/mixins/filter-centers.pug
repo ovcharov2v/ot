@@ -1,0 +1,43 @@
+mixin filterCenters()
+	// Filter
+	form.filter
+		input.input.filter__search(type="text", placeholder="Поиск...")
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Кол-во сотрудников
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Range slider
+				.range-slider.filter__group-el
+					p.range-slider__label От
+						|
+						|
+						span.range-slider__label-from 2
+						|
+						| до
+						|
+						span.range-slider__label-to 200
+						|
+						| человек
+					input.range-slider__input(type="text", data-min="2", data-max="200")
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Промокоды
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Не важно
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Ест
+						span.radio__counter (21)
+
+
+
+

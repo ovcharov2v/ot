@@ -1,0 +1,36 @@
+.sort-select {
+	width: unset;
+	padding: 0;
+	border: none;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 500;
+	color: #898989;
+
+	&__option {
+		display: flex !important;
+		gap: 10px;
+
+		span {
+			white-space: nowrap !important;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__icon {
+		flex-shrink: 0;
+		display: block;
+		width: 17px;
+		height: 17px;
+	}
+
+	.ss-single {
+		display: flex !important;
+		gap: 10px;
+	}
+
+	.ss-arrow path {
+		stroke: #898989;
+	}
+}

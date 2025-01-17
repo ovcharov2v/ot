@@ -1,0 +1,93 @@
+.review-card {
+	@include main-shadow;
+	padding: 20px 30px 30px;
+	border-radius: 10px;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 8px;
+	}
+
+	&__name {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&__time {
+		font-size: 16px;
+		line-height: 20px;
+		color: #929292;
+	}
+
+	&__stars-box {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		margin-bottom: 16px;
+	}
+
+	&__stars {
+		display: flex;
+		flex-shrink: 0;
+	}
+
+	&__star {
+		display: block;
+		width: 17px;
+		height: 17px;
+	}
+
+	&__stars-value {
+		font-size: 14px;
+		line-height: 17px;
+		white-space: nowrap;
+	}
+
+	&__content {
+		margin-bottom: 16px;
+	}
+
+	&__title {
+		margin-bottom: 8px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&__text-box {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&__bottom {
+		display: grid;
+		grid-template: auto / repeat(2,minmax(0,1fr));
+		grid-gap: 50px;
+	}
+
+	&__bottom-col {
+	}
+
+	&__bottom-title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 12px;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+	}
+
+	&__bottom-icon {
+		display: block;
+		width: 20px;
+		height: 20px;
+	}
+
+	&__bottom-text {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}

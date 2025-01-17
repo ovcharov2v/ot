@@ -1,0 +1,14 @@
+.section-top-products {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}

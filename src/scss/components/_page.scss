@@ -1,0 +1,65 @@
+.page {
+	padding-bottom: 130px;
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__filter-layout {
+		display: grid;
+		grid-template: auto/ 315px 1fr;
+		grid-gap: 20px;
+	}
+
+	&__filter {
+		width: 100%;
+	}
+
+	&__content {
+	}
+
+	&__content-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__result-counter {
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__group-title {
+		.page__webinars-grid + & {
+			margin-top: 50px;
+		}
+	}
+
+	&__webinars-grid {
+		display: grid;
+		grid-template: auto / repeat(3, minmax(0,1fr));
+		grid-gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__promocard-grid {
+		display: grid;
+		grid-template: auto / repeat(4, minmax(0,1fr));
+		grid-gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__more-btn {
+		width: 100%;
+	}
+}

@@ -1,0 +1,175 @@
+mixin filterServices()
+	// Filter
+	form.filter
+		input.input.filter__search(type="text", placeholder="Поиск...")
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text По типу услуги
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Организация системы
+						|
+						|
+						br
+						|
+						| охраны труда
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text СОУТ
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Аудит и консалтинг
+						|
+						|
+						br
+						|
+						|в области охраны труда
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Пожарная безопасность
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Экологическая безопасность
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Медицинские осмотры
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Защита персональных данных
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Охрана труда в смежных сферах
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f1")
+					span.radio__text Лицензирование и сертификация
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text Стоимость за
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Рабочее место
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Сотрудника
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text По сложности и объёму услуг
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Простые услуги
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f2")
+					span.radio__text Комплексные услуги
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text По законодательным требованиям
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f3")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f3")
+					span.radio__text Обязательные услуги
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f3")
+					span.radio__text Рекомендуемые услуги
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text По срокам исполнения
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f4")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f4")
+					span.radio__text Услуги с коротким сроком
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f4")
+					span.radio__text Долгосрочные услуги
+						span.radio__counter (21)
+		// Group
+		.filter__group.filter__group--expanded
+			button.filter__group-top(type="button")
+				span.filter__group-top-text По форме предоставления
+				+svg("arrow-down")(class="filter__group-arrow")
+			.filter__group-list
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f5")
+					span.radio__text Любой
+						span.radio__counter (23)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f5")
+					span.radio__text Онлайн
+						span.radio__counter (21)
+				// Radio
+				label.filter__group-el.radio
+					input.radio__input(type="radio", name="f5")
+					span.radio__text Офлайн
+						span.radio__counter (21)

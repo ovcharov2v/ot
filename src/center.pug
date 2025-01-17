@@ -1,0 +1,295 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Учебный центр"
+
+prepend styles
+
+prepend scripts
+
+append scripts
+	script(src!=`${baseDir}js/sort-select.js`)
+	script(src!=`${baseDir}js/modal.js`)
+	script(src!=`${baseDir}js/uc.js`)
+
+append modals
+	+modalPromo()
+
+block content
+	+breadcrumb(['Главная', 'Учебные центры'], 'Novatika')
+
+	.uc.container
+		h1.heading2.page__title Novatika
+		.uc__grid
+			+centerBlock()
+			.uc__content
+				// Nav Slider
+				.nav-slider.nav-slider--center.uc__nav-slider
+					.swiper.nav-slider__el(data-cols="4", data-slave="center-nav-slider")
+						.swiper-wrapper
+							.swiper-slide.nav-slider__slide.nav-slider__slide--active(data-slide="0") Об учебном
+								br
+								|центре
+							.swiper-slide.nav-slider__slide(data-slide="1") Промокоды учебного центра
+							.swiper-slide.nav-slider__slide(data-slide="2") Все курсы учебного центра
+							.swiper-slide.nav-slider__slide(data-slide="3") Отзывы об учебном центре
+							.swiper-slide.nav-slider__slide(data-slide="4") Вебинары учебного центра
+							.swiper-slide.nav-slider__slide(data-slide="5") Услуги учебного центра
+					.nav-slider__btn-box
+						button.nav-slider__btn.nav-slider__btn--prev(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+						button.nav-slider__btn.nav-slider__btn--next(type="button")
+							+svg("arrow-outlined")(class="nav-slider__btn-icon")
+				// Content Slider
+				#center-nav-slider.swiper
+					.swiper-wrapper
+						// Content
+						.swiper-slide
+							h3.heading3 Направления обучения
+							.uc__filter.uc__filter--about(style="max-height: 190px")
+								ul.uc__filter-list
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Охрана труда
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Строительство
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Промышленная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Рабочие процессии
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Первая помощь
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Проектирования
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Пожарная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Самоходная техника
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Работы на высоте и в ОЗП
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Инженерные изыскания
+									li.uc__filter-el
+										a.uc__filter-link(href="#") ГО и ЧС
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Транспортная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") СИЗ
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Краны и Лифты
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Безопасность дорожного движения
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Работы повышенной опасности
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Антитеррористическая безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Сварочное производство
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Радиационная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Безопасность на железнодорожном транспорте
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Кадровое дело
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Неразрушающий конроль
+									li.uc__filter-el
+										a.uc__filter-link(href="#") ЖКХ
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Экология
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Логистика
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Взрывные работы и работы со взрывчатыми материалами
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Теплоэнергетика и теплотехника
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Метрология и сертификация
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Информационная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Электроэнергетика и электробезопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Энергоаудит и энергосбережение
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Системы менеджмента качества
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Госзакупки
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Маркшейдерское дело
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Сметное дело
+								.uc__filter-btn-box
+									button.button.button--blue.uc__filter-btn(type="button") Все направления
+							h3.heading3 Об учебном центре
+							.uc__slide-content
+								p 🔸 «NOVATIKA» — дополнительное образование по-новому 🙃. Работаем с 2019 года и обучаем по более чем 1 500+ программ профессионального и дополнительного профессионального образования.
+									br
+									|Наше главное преимущество — наш опыт. Качеством образовательных программ мы заслужили признание и доверие сотен клиентов. Доверьтесь и Вы!
+								br
+								p Мы осуществляем обучение:
+								ul
+									li дополнительное профессиональное образование;
+									li дополнительное образование;
+									li профессиональное обучение.
+						// Content
+						.swiper-slide
+							h3.heading3 Промокоды и скидки учебного центра
+							.uc__content-grid
+								+promoCard(false, "Скидка в Новатике!")
+								+promoCard(false, "Скидка в Новатике!")
+							p Пока у этого учебного центра нет доступных акций, но мы следим за обновлениями и сразу добавим, как только появятся интересные предложения.
+						// Content
+						.swiper-slide
+							h3.heading3 Все курсы учебного центра
+							.uc__filter
+								ul.uc__filter-list
+									li.uc__filter-el
+										a.uc__filter-link.uc__filter-link--active(href="#") Повышение квалификации
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Профессиональная переподготовка
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Дополнительно образование
+									li.uc__filter-el
+										a.uc__filter-link(href="#") По убыванию цены
+									li.uc__filter-el
+										a.uc__filter-link(href="#") По возрастанию цены
+							.uc__col
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+								+productCard([['ПП', 'blue']], 'Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ', true, false)
+							button.button.button--gray.button--size-big.uc__btn-more(type="button") Показать еще
+						// Content
+						.swiper-slide
+							h3.heading3 Отзывы об учебном центре
+							.uc__rating
+								.uc__rating-box
+									.uc__rating-text
+										p.uc__rating-value
+											strong 4.8
+											|
+											| из 5
+										p.uc__rating-total 24 отзыва
+										a.button.button--blue.uc__rating-btn(href="#") Добавить отзыв
+									.uc__rating-data
+										// row
+										.uc__rating-row
+											.uc__rating-stars
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+											.uc__rating-progress
+												.uc__rating-progress-val(style="width:100%")
+											span.uc__rating-counter 18
+										// row
+										.uc__rating-row
+											.uc__rating-stars
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+											.uc__rating-progress
+												.uc__rating-progress-val(style="width:20%")
+											span.uc__rating-counter 6
+										// row
+										.uc__rating-row
+											.uc__rating-stars
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+											.uc__rating-progress
+												.uc__rating-progress-val(style="width:0")
+											span.uc__rating-counter 0
+										// row
+										.uc__rating-row
+											.uc__rating-stars
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+											.uc__rating-progress
+												.uc__rating-progress-val(style="width:0")
+											span.uc__rating-counter 0
+										// row
+										.uc__rating-row
+											.uc__rating-stars
+												+svg("rating-star")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+												+svg("rating-star-empty")(class="uc__rating-star")
+											.uc__rating-progress
+												.uc__rating-progress-val(style="width:0")
+											span.uc__rating-counter 0
+							.uc__sort-row
+								select.sort-select
+									option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-asc'></use></svg> <span>Сначала новые</span>") Сначала новые
+									option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-desc'></use></svg> <span>Сначала старые</span>") Сначала старые
+							.uc__col
+								+reviewCard()
+								+reviewCard()
+								+reviewCard()
+								+reviewCard()
+								+reviewCard()
+							button.button.button--gray.button--size-big.uc__btn-more(type="button") Показать еще
+							br
+							br
+							p На данный момент отзывы об этом учебном центре отсутствуют. Мы приглашаем вас поделиться своим мнением, если вы уже пользовались его услугами.
+
+						// Content
+						.swiper-slide
+							h3.heading3 Вебинары учебного центра
+							.uc__content-grid
+								+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
+								+webinar("images/webinars/img2.jpg", "Изменения по охране труда с 1 сентября 2024 года. Практические рекомендации.")
+								+webinar("images/webinars/img3.jpg", "Новый профстандарт \"Специалист по обучению в области ОТ\"")
+							p Пока вебинаров от этого учебного центра на сайте нет. Но мы уверены, что они появятся здесь совсем скоро!
+						// Content
+						.swiper-slide
+							h3.heading3 Услуги учебного центра
+							.uc__filter(style="max-height: 100px")
+								p.uc__filter-title Тип услуги:
+								ul.uc__filter-list
+									li.uc__filter-el
+										a.uc__filter-link.uc__filter-link--active(href="#") Организация системы охраны труда
+									li.uc__filter-el
+										a.uc__filter-link(href="#") СОУТ
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Аудит и консалтинг в области охраны труда
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Обучение и повышение квалификации
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Пожарная безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Экологическая безопасность
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Медицинские осмотры
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Защита персональных данных
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Охрана труда в смежных сферах
+									li.uc__filter-el
+										a.uc__filter-link(href="#") Лицензирование и сертификация
+								.uc__filter-btn-box
+									button.button.button--blue.uc__filter-btn(type="button") Показать еще
+							.uc__col
+								+serviceCard([['Комплексная услуга', 'blue'], ['Организация системы охраны труда', 'transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга', 'red'], ['Долгосрочная услуга', 'violet'], ['Онлайн', 'blue']])
+								+serviceCard([['Комплексная услуга', 'blue'], ['Организация системы охраны труда', 'transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга', 'red'], ['Долгосрочная услуга', 'violet'], ['Онлайн', 'blue']])
+								+serviceCard([['Комплексная услуга', 'blue'], ['Организация системы охраны труда', 'transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга', 'red'], ['Долгосрочная услуга', 'violet'], ['Онлайн', 'blue']])
+								+serviceCard([['Комплексная услуга', 'blue'], ['Организация системы охраны труда', 'transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга', 'red'], ['Долгосрочная услуга', 'violet'], ['Онлайн', 'blue']])
+								+serviceCard([['Комплексная услуга', 'blue'], ['Организация системы охраны труда', 'transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга', 'red'], ['Долгосрочная услуга', 'violet'], ['Онлайн', 'blue']])
+							button.button.button--gray.button--size-big.uc__btn-more(type="button") Показать еще
+
+	+reviewForm()
+

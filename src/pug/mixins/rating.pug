@@ -1,0 +1,12 @@
+mixin rating()
+	// Rating
+	.rating&attributes(attributes)
+		.rating__box
+			.rating__stars-row
+				+svg("rating-star")(class="rating__star")
+				+svg("rating-star")(class="rating__star")
+				+svg("rating-star")(class="rating__star")
+				+svg("rating-star")(class="rating__star")
+				+svg("rating-star-half")(class="rating__star")
+			span.rating__value 4.8 / 5
+		span.rating__reviews-counter (24 отзыва)

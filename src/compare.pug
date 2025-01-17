@@ -1,0 +1,164 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Сравнение"
+
+prepend styles
+
+prepend scripts
+
+append scripts
+
+block content
+	+breadcrumb(['Главная'], 'Сравнение')
+
+	.page.container
+		h1.heading2.page__title Сравнение
+		.page__content
+			// Nav Slider
+			.nav-slider.nav-slider--center.uc__nav-slider
+				.swiper.nav-slider__el(data-cols="2", data-slave="compare-slider")
+					.swiper-wrapper
+						.swiper-slide.nav-slider__slide.nav-slider__slide--active(data-slide="0") Курсы
+						.swiper-slide.nav-slider__slide(data-slide="1") Услуги
+				.nav-slider__btn-box
+					button.nav-slider__btn.nav-slider__btn--prev(type="button")
+						+svg("arrow-outlined")(class="nav-slider__btn-icon")
+					button.nav-slider__btn.nav-slider__btn--next(type="button")
+						+svg("arrow-outlined")(class="nav-slider__btn-icon")
+			// Content Slider
+			#compare-slider.swiper
+				.swiper-wrapper
+					// Content
+					.swiper-slide
+						// Table
+						.compare-table
+							table.compare-table__el
+								tr
+									td.compare-table__title Курс
+									td.compare-table__value
+										strong Авиатехник ГСМ
+									td.compare-table__value
+										strong Авиационный техник по горюче-смазочным материалам (ГСМ)
+								tr
+									td.compare-table__title Продолжительность
+									td.compare-table__value 68 часов
+									td.compare-table__value 72 часа
+								tr
+									td.compare-table__title Вид обучения
+									td.compare-table__value Повышение квалификации
+									td.compare-table__value Профессиональная переподготовка
+								tr
+									td.compare-table__title Учебный центр
+									td.compare-table__value
+										strong Novatika
+									td.compare-table__value
+										strong Novatika
+								tr
+									td.compare-table__title Рейтинг
+									td.compare-table__value
+										+rating().rating--inline
+									td.compare-table__value
+										+rating().rating--inline
+								tr
+									td.compare-table__title Цена
+									td.compare-table__value
+										p.compare-table__old-price 60 434 р./курс
+										p.compare-table__price 10 999 р./курс
+									td.compare-table__value
+										p.compare-table__price 10 999 р./курс
+								tr
+									td.compare-table__title Направление
+									td.compare-table__value Авиация
+									td.compare-table__value Авиация
+								tr
+									td.compare-table__title
+									td.compare-table__value
+										a.button.button--blue.compare-table__link(href="#", target="_blank") Курс на сайте УЦ
+										.compare-table__action-box
+											button.compare-table__action.compare-table__action--green(type="button")
+												+svg("favorite").compare-table__action-icon
+											button.compare-table__action.compare-table__action--red(type="button")
+												+svg("trash").compare-table__action-icon
+									td.compare-table__value
+										a.button.button--blue.compare-table__link(href="#", target="_blank") Курс на сайте УЦ
+										.compare-table__action-box
+											button.compare-table__action.compare-table__action--green(type="button")
+												+svg("favorite").compare-table__action-icon
+											button.compare-table__action.compare-table__action--red(type="button")
+												+svg("trash").compare-table__action-icon
+
+
+
+					// Content
+					.swiper-slide
+						// Table
+						.compare-table
+							table.compare-table__el
+								tr
+									td.compare-table__title Услуга
+									td.compare-table__value
+										strong Специальная оценка условий труда (СОУТ)
+									td.compare-table__value
+										strong Специальная оценка условий труда (СОУТ)
+								tr
+									td.compare-table__title Тип услуги
+									td.compare-table__value Организация системы  охраны труда
+									td.compare-table__value Организация системы  охраны труда
+								tr
+									td.compare-table__title Стоимость за
+									td.compare-table__value Рабочее место
+									td.compare-table__value Сотрудника
+								tr
+									td.compare-table__title Сложность и объём услуги
+									td.compare-table__value Простая услуга
+									td.compare-table__value Комплексная услуга
+								tr
+									td.compare-table__title Законодательные требования
+									td.compare-table__value Обязательная услуга
+									td.compare-table__value Рекомендуемая услуга
+								tr
+									td.compare-table__title Сроки исполнения
+									td.compare-table__value Услуга с коротким сроком
+									td.compare-table__value Долгосрочная услуга
+								tr
+									td.compare-table__title Форма предоставления
+									td.compare-table__value Онлайн
+									td.compare-table__value Офлайн
+								tr
+									td.compare-table__title Учебный центр
+									td.compare-table__value
+										strong Novatika
+									td.compare-table__value
+										strong Novatika
+								tr
+									td.compare-table__title Рейтинг
+									td.compare-table__value
+										+rating().rating--inline
+									td.compare-table__value
+										+rating().rating--inline
+								tr
+									td.compare-table__title Стоимость
+									td.compare-table__value
+										p.compare-table__price от 5 999 р. / раб. мест.
+									td.compare-table__value
+										p.compare-table__price от 10 999 р./ сотр.
+								tr
+									td.compare-table__title
+									td.compare-table__value
+										a.button.button--blue.compare-table__link(href="#", target="_blank") Курс на сайте УЦ
+										.compare-table__action-box
+											button.compare-table__action.compare-table__action--green(type="button")
+												+svg("favorite").compare-table__action-icon
+											button.compare-table__action.compare-table__action--red(type="button")
+												+svg("trash").compare-table__action-icon
+									td.compare-table__value
+										a.button.button--blue.compare-table__link(href="#", target="_blank") Курс на сайте УЦ
+										.compare-table__action-box
+											button.compare-table__action.compare-table__action--green(type="button")
+												+svg("favorite").compare-table__action-icon
+											button.compare-table__action.compare-table__action--red(type="button")
+												+svg("trash").compare-table__action-icon

@@ -1,2 +1,45 @@
 mixin header()
+	// Header
 	header.header
+		.header__top
+			.container
+				ul.header__top-nav
+					li.header__top-el
+						a.header__top-link(href="#") Обратная связь
+					li.header__top-el
+						a.header__top-link(href="#") Реклама на сайте
+					li.header__top-el
+						a.header__top-link(href="#") Подписаться на новости
+					li.header__top-el
+						a.header__top-link(href="#") ваша_почта@ohranatruda.ru
+		.container.header__content
+			a.header__logo-box(href="./main.html")
+				img.header__logo(src="images/common/logo.png", alt)
+			.header__nav-box
+				button.header__menu-btn(data-menu="courses-menu")
+					| Каталог курсов
+					.header__menu-icon-box
+						+svg("menu")(class="header__menu-icon header__menu-icon--normal")
+						+svg("menu-close")(class="header__menu-icon header__menu-icon--active")
+				nav.header__nav
+					ul.header__nav-list
+						li.header__nav-el
+							a.header__nav-link(href="#") Учебные центры
+						li.header__nav-el
+							a.header__nav-link(href="#") Вебинары
+						li.header__nav-el
+							a.header__nav-link(href="#", data-menu="services-menu") Услуги
+						li.header__nav-el
+							a.header__nav-link(href="#") Промокоды
+			ul.header__action-list
+				li.header__action-el
+					a.header__action-link(href="#")
+						+svg("search")(class="header__action-icon")
+				li.header__action-el
+					a.header__action-link(href="#")
+						+svg("compare")(class="header__action-icon")
+				li.header__action-el
+					a.header__action-link(href="#")
+						+svg("favorite")(class="header__action-icon")
+		+menuCourses()
+		+menuServices()

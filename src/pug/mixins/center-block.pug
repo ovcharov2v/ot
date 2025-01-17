@@ -1,0 +1,24 @@
+mixin centerBlock()
+	// Center block
+	article.center-block
+		img.center-block__logo(src="images/centers/logo1-big.png", alt)
+		ul.center-block__list
+			li.center-block__el Полное наименование
+				span.center-block__value ООО «Новатика»
+			li.center-block__el ОГРН
+				span.center-block__value 1207700463222
+			li.center-block__el Лицензия
+				span.center-block__value № Л035-01297-33/00233560 от 25.02.2022 г.
+			li.center-block__el Юр. адрес
+				span.center-block__value г. Москва, набережная Дербеневская, д.11
+			li.center-block__el Кол-во сотрудников
+				span.center-block__value 28 человек
+		p.center-block__counter
+			strong 1500
+			|
+			|курсов на сайте
+		+rating()(class="rating--inline center-block__rating")
+		.center-block__btn-group
+			a.button.button--green(href="#") Промокоды
+			a.button.button--violet(href="#") Отзывы об УЦ
+			a.button.button--blue(href="#", target="_blank") Перейти на сайт

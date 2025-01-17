@@ -276,6 +276,8 @@ html(class=html.classList)&attributes(html.attrs)
 			if link.maskIcon.href !== null
 				link(rel="mask-icon" href!=link.maskIcon.href color=link.maskIcon.color)
 		block styles
+			link(rel="stylesheet" href!=`${baseDir}lib/swiper/swiper-bundle.min.css?v=${Date.now()}`)
+			link(rel="stylesheet" href!=`${baseDir}lib/slim-select/slimselect.css"`)
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
@@ -285,7 +287,9 @@ html(class=html.classList)&attributes(html.attrs)
 			block content
 		+footer()
 		include ../images/sprite/sprite.svg
+		block modals
 		block scripts
-			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
-			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+			script(src!=`${baseDir}lib/swiper/swiper-bundle.min.js?v=${Date.now()}`)
+			script(src!=`${baseDir}lib/slim-select/slimselect.min.js`)
+			script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
 		block body-end

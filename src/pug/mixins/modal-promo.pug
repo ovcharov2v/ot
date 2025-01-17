@@ -1,0 +1,18 @@
+mixin modalPromo()
+	// Modal Promo
+	#modal-promo.modal
+		.container.modal__container
+			.modal__window
+				button.modal__close.js-modal-close(aria-label="Закрыть")
+					+svg("close").modal__close-icon
+				img.modal__smile(src="images/common/smile.svg", alt)
+				p.modal__title Скидка в Новатике!
+				p.modal__text Скидка актуальна для учебного центра «Новатика»
+				.modal__promo-box
+					p.modal__promo-text Скопируйте этот код и перейдите на сайт по кнопке ниже:
+					.modal__promo-form
+						input.modal__promo-input(type="text", readonly, value="DPOOHRANATRUDA")
+						button.button.button--green.modal__promo-btn.js-modal-close(type="button") Скопировать
+				p.modal__promo-description Скидка - 5% на заказ!
+				p.modal__promo-note * - Детали уточняйте у менеджера учебного центра
+				a.button.button--violet.modal__promo-link.js-modal-close(href="#", target="_blank") Перейти на сайт
