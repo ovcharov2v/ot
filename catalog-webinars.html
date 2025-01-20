@@ -4,9 +4,11 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
-		<title>Главная</title>
-		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css?v=1737399577867">
-		<link rel="stylesheet" href="./css/main.css?v=1737399577867">
+		<title>Каталог Вебинары</title>
+		<link rel="stylesheet" href="./lib/vanilla-rangeslider/css/rangeslider.css"">
+		<link rel="stylesheet" href="./lib/slim-select/slimselect.css"">
+		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css?v=1737399577523">
+		<link rel="stylesheet" href="./css/main.css?v=1737399577523">
 	</head>
 	<body>
 		<!-- Header-->
@@ -114,343 +116,19 @@
 			</div>
 		</header>
 		<main class="main">
-			<!-- Section Hero-->
-			<section class="section-hero container">
-				<div class="section-hero__box">
-					<div class="section-hero__content-box">
-						<h1 class="heading1 section-hero__title">Курсы по охране труда от ведущих учебных центров в одном месте</h1>
-						<p class="section-hero__text">Профессиональный подход к обучению.<br>Собрали для вас курсы ведущих учебных центров с подробными программами, актуальными ценами и отзывами.</p>
-						<ul class="section-hero__nav">
-							<li class="section-hero__nav-el"><a class="section-hero__nav-link" href="#">
-									<svg class="section-hero__nav-icon">
-										<use xlink:href="#sale-broken"></use>
-									</svg>Промокоды и скидки</a></li>
-							<li class="section-hero__nav-el"><a class="section-hero__nav-link" href="#">
-									<svg class="section-hero__nav-icon">
-										<use xlink:href="#online-learning"></use>
-									</svg>Рекомендуемые курсы</a></li>
-							<li class="section-hero__nav-el"><a class="section-hero__nav-link" href="#">
-									<svg class="section-hero__nav-icon">
-										<use xlink:href="#good-o"></use>
-									</svg>Популярные УЦ</a></li>
-						</ul>
-					</div>
-					<div class="section-hero__img-box"><img class="section-hero__img" src="images/section-hero/img.svg" alt></div>
-				</div>
-			</section>
-			<!-- Section Top Products-->
-			<section class="section-top-products container">
-				<h2 class="heading2 section-top-products__title">Популярные курсы и программы</h2>
-				<div class="section-top-products__grid">
-					<!-- Product card-->
-					<article class="product-card">
-						<div class="product-card__description-box">
-							<div class="product-card__description">
-								<div class="product-card__label-box">
-									<ul class="product-card__label-list">
-										<li class="label label--green">ДО</li>
-										<li class="label label--violet">ПК</li>
-										<li class="label label--blue">ПП</li>
-									</ul>
-									<p class="product-card__duration">Длительность: 72 часа</p>
-								</div>
-								<h3 class="product-card__title">Авиатехник ГСМ</h3>
-								<div class="product-card__price-box"><span class="product-card__old-price">60 434 р./курс</span><span class="product-card__new-price">10 999 р./курс</span>
-								</div>
-							</div>
-							<div class="product-card__rating-box"><img class="product-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating product-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-card__bottom-box">
-							<ul class="product-card__info-list">
-								<li class="product-card__info">Скидка<span class="product-card__info-value">90%</span></li>
-								<li class="product-card__info">Промокоды<span class="product-card__info-value">4 шт.</span></li>
-							</ul>
-							<div class="product-card__action-list">
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue product-card__action-btn" href="#">Курс на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Product card-->
-					<article class="product-card">
-						<div class="product-card__description-box">
-							<div class="product-card__description">
-								<div class="product-card__label-box">
-									<ul class="product-card__label-list">
-										<li class="label label--blue">ПП</li>
-									</ul>
-									<p class="product-card__duration">Длительность: 72 часа</p>
-								</div>
-								<h3 class="product-card__title">Монтаж, техническое обслуживание и ремонт систем противопожарного водоснабжения и их элементов, включая диспетчеризацию и проведение пусконаладочных работ</h3>
-								<div class="product-card__price-box"><span class="product-card__old-price">60 434 р./курс</span><span class="product-card__new-price">10 999 р./курс</span>
-								</div>
-							</div>
-							<div class="product-card__rating-box"><img class="product-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating product-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-card__bottom-box">
-							<ul class="product-card__info-list">
-								<li class="product-card__info">Скидка<span class="product-card__info-value">90%</span></li>
-								<li class="product-card__info">Промокоды<span class="product-card__info-value">4 шт.</span></li>
-							</ul>
-							<div class="product-card__action-list">
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue product-card__action-btn" href="#">Курс на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Product card-->
-					<article class="product-card">
-						<div class="product-card__description-box">
-							<div class="product-card__description">
-								<div class="product-card__label-box">
-									<ul class="product-card__label-list">
-										<li class="label label--violet">ПК</li>
-									</ul>
-									<p class="product-card__duration">Длительность: 72 часа</p>
-								</div>
-								<h3 class="product-card__title">Обучение по дополнительной профессиональной программе повышения квалификации Специалист контрактной системы в сфере закупок по 223ФЗ</h3>
-								<div class="product-card__price-box"><span class="product-card__old-price">60 434 р./курс</span><span class="product-card__new-price">10 999 р./курс</span>
-								</div>
-							</div>
-							<div class="product-card__rating-box"><img class="product-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating product-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-card__bottom-box">
-							<ul class="product-card__info-list">
-								<li class="product-card__info">Скидка<span class="product-card__info-value">90%</span></li>
-								<li class="product-card__info">Промокоды<span class="product-card__info-value">4 шт.</span></li>
-							</ul>
-							<div class="product-card__action-list">
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue product-card__action-btn" href="#">Курс на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Product card-->
-					<article class="product-card">
-						<div class="product-card__description-box">
-							<div class="product-card__description">
-								<div class="product-card__label-box">
-									<ul class="product-card__label-list">
-										<li class="label label--green">ДО</li>
-									</ul>
-									<p class="product-card__duration">Длительность: 72 часа</p>
-								</div>
-								<h3 class="product-card__title">Мастер по наращиванию ресниц</h3>
-								<div class="product-card__price-box"><span class="product-card__new-price">10 999 р./курс</span>
-								</div>
-							</div>
-							<div class="product-card__rating-box"><img class="product-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating product-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-card__bottom-box">
-							<ul class="product-card__info-list">
-								<li class="product-card__info">Промокоды<span class="product-card__info-value">4 шт.</span></li>
-							</ul>
-							<div class="product-card__action-list">
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue product-card__action-btn" href="#">Курс на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Product card-->
-					<article class="product-card">
-						<div class="product-card__description-box">
-							<div class="product-card__description">
-								<div class="product-card__label-box">
-									<ul class="product-card__label-list">
-										<li class="label label--violet">ПК</li>
-									</ul>
-									<p class="product-card__duration">Длительность: 72 часа</p>
-								</div>
-								<h3 class="product-card__title">Обучение по дополнительной профессиональной программе повышения квалификации Специалист контрактной системы в сфере закупок по 223ФЗ</h3>
-								<div class="product-card__price-box"><span class="product-card__old-price">60 434 р./курс</span><span class="product-card__new-price">10 999 р./курс</span>
-								</div>
-							</div>
-							<div class="product-card__rating-box"><img class="product-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating product-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="product-card__bottom-box">
-							<ul class="product-card__info-list">
-								<li class="product-card__info">Скидка<span class="product-card__info-value">90%</span></li>
-								<li class="product-card__info">Промокоды<span class="product-card__info-value">4 шт.</span></li>
-							</ul>
-							<div class="product-card__action-list">
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="product-card__action">
-									<svg class="product-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue product-card__action-btn" href="#">Курс на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-				</div>
-			</section>
-			<!-- Section Directions-->
-			<section class="section-directions container">
-				<h2 class="heading2 section-directions__title">Направления обучения</h2>
-				<ul class="section-directions__list">
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Безопасность и охрана труда</a></li>
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Строительство и проектирование</a></li>
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Энергетика и экология</a></li>
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Транспорт и логистика</a></li>
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Технические направления</a></li>
-					<li class="section-directions__el"><a class="section-directions__link" href="#">Управление и менеджмент</a></li>
+			<!-- Breadcrumbs-->
+			<div class="container breadcrumb">
+				<ul class="breadcrumb__list">
+					<li class="breadcrumb__item">
+						<!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+					</li>
+					<li class="breadcrumb__item"><span class="breadcrumb__current">Вебинары</span></li>
 				</ul>
-			</section>
-			<!-- Section Top Webinars-->
-			<section class="section-top-webinars container">
-				<h2 class="heading2 section-top-webinars__title">Популярные вебинары</h2>
-				<div class="section-top-webinars__grid">
+			</div>
+			<div class="page container">
+				<h1 class="heading2 page__title">Вебинары</h1>
+				<h2 class="page__group-title heading3">Ближайшие вебинары</h2>
+				<div class="page__webinars-grid">
 					<!-- Webinar card-->
 					<div class="webinar-card">
 						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img1.jpg" alt="alt"/></div>
@@ -482,8 +160,8 @@
 					</div>
 					<!-- Webinar card-->
 					<div class="webinar-card">
-						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img1.jpg" alt="alt"/></div>
-						<h3 class="webinar-card__title">VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»</h3>
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img2.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Изменения по охране труда с 1 сентября 2024 года. Практические рекомендации.</h3>
 						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
 							<!-- Rating-->
 							<div class="rating webinar-card__rating">
@@ -509,6 +187,38 @@
 							</div>
 						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img3.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Новый профстандарт &quot;Специалист по обучению в области ОТ&quot;</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
+							<!-- Rating-->
+							<div class="rating webinar-card__rating">
+								<div class="rating__box">
+									<div class="rating__stars-row">
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star-half"></use>
+										</svg>
+									</div><span class="rating__value">4.8 / 5</span>
+								</div><span class="rating__reviews-counter">(24 отзыва)</span>
+							</div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
+					</div>
+				</div>
+				<h2 class="page__group-title heading3">Ближайшие вебинары</h2>
+				<div class="page__webinars-grid">
 					<!-- Webinar card-->
 					<div class="webinar-card">
 						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img1.jpg" alt="alt"/></div>
@@ -538,392 +248,13 @@
 							</div>
 						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
-				</div>
-				<div class="section-top-webinars__button-box"><a class="button button--blue" href="#">Все вебинары</a></div>
-			</section>
-			<!-- Section Advantages-->
-			<section class="section-advantages container">
-				<h2 class="heading2 section-advantages__title">Мы создаем удобство для вас</h2>
-				<div class="section-advantages__text-box">
-					<p class="section-advantages__text">Мы сделали выбор курсов по охране труда простым, надежным и выгодным. Доверьтесь профессионалам!</p><a class="button button--blue" href="#">Перейти в каталог</a>
-				</div>
-				<div class="section-advantages__grid">
-					<!-- Card-->
-					<div class="section-advantages__card">
-						<div class="section-advantages__icon-box section-advantages__icon-box--green">
-							<svg class="section-advantages__icon">
-								<use xlink:href="#asterisk"></use>
-							</svg>
-						</div>
-						<h3 class="section-advantages__card-title">Всегда актуальная информация</h3>
-						<p class="section-advantages__card-text">Данные о курсах, учебных центрах и программах обучения регулярно обновляются.</p>
-					</div>
-					<!-- Card-->
-					<div class="section-advantages__card">
-						<div class="section-advantages__icon-box section-advantages__icon-box--violet">
-							<svg class="section-advantages__icon">
-								<use xlink:href="#asterisk"></use>
-							</svg>
-						</div>
-						<h3 class="section-advantages__card-title">Реальные отзывы<br>учеников</h3>
-						<p class="section-advantages__card-text">Честные отзывы тех, кто уже прошел обучение, помогут сделать правильный выбор.</p>
-					</div>
-					<!-- Card-->
-					<div class="section-advantages__card">
-						<div class="section-advantages__icon-box section-advantages__icon-box--blue">
-							<svg class="section-advantages__icon">
-								<use xlink:href="#asterisk"></use>
-							</svg>
-						</div>
-						<h3 class="section-advantages__card-title">Проверенные учебные центры</h3>
-						<p class="section-advantages__card-text">Собираем только надежные курсы от авторитетных учебных центров.</p>
-					</div>
-					<!-- Card-->
-					<div class="section-advantages__card">
-						<div class="section-advantages__icon-box section-advantages__icon-box--red">
-							<svg class="section-advantages__icon">
-								<use xlink:href="#asterisk"></use>
-							</svg>
-						</div>
-						<h3 class="section-advantages__card-title">Акции и выгодные предложения</h3>
-						<p class="section-advantages__card-text">Доступ к скидкам, специальным промокодам и акциям для экономии.</p>
-					</div>
-				</div>
-			</section>
-			<!-- Section Digits-->
-			<section class="section-digits container">
-				<h2 class="heading2 section-digits__title">Цифры говорят за нас</h2>
-				<div class="section-digits__grid">
-					<!-- Card-->
-					<figure class="section-digits__card">
-						<div class="section-digits__icon-box section-digits__icon-box--green">
-							<svg class="section-digits__icon">
-								<use xlink:href="#online-learning"></use>
-							</svg>
-						</div>
-						<figcaption class="section-digits__card-text"><span class="section-digits__card-value">12987</span>курсов собрано на сайте</figcaption>
-					</figure>
-					<!-- Card-->
-					<figure class="section-digits__card">
-						<div class="section-digits__icon-box section-digits__icon-box--violet">
-							<svg class="section-digits__icon">
-								<use xlink:href="#search"></use>
-							</svg>
-						</div>
-						<figcaption class="section-digits__card-text"><span class="section-digits__card-value">42354</span>слушателей нашли свой курс через нас</figcaption>
-					</figure>
-					<!-- Card-->
-					<figure class="section-digits__card">
-						<div class="section-digits__icon-box section-digits__icon-box--blue">
-							<svg class="section-digits__icon">
-								<use xlink:href="#briefcase"></use>
-							</svg>
-						</div>
-						<figcaption class="section-digits__card-text"><span class="section-digits__card-value">305</span>учебных центров сотрудничают с нами</figcaption>
-					</figure>
-					<!-- Card-->
-					<figure class="section-digits__card">
-						<div class="section-digits__icon-box section-digits__icon-box--red">
-							<svg class="section-digits__icon">
-								<use xlink:href="#good-o"></use>
-							</svg>
-						</div>
-						<figcaption class="section-digits__card-text"><span class="section-digits__card-value">98757</span>реальных отзывов об учебных центрах</figcaption>
-					</figure>
-				</div>
-			</section>
-			<!-- Section Top Services-->
-			<section class="section-top-services container">
-				<h2 class="heading2 section-top-services__title">Популярные услуги</h2>
-				<div class="section-top-services__grid">
-					<!-- Service card-->
-					<article class="service-card">
-						<div class="service-card__description-box">
-							<div class="service-card__description">
-								<ul class="service-card__label-list">
-									<li class="label label--blue">Комплексная услуга</li>
-									<li class="label label--transparent">Организация системы охраны труда</li>
-								</ul>
-								<h3 class="service-card__title">Специальная оценка условий труда (СОУТ)</h3>
-								<ul class="service-card__label-list">
-									<li class="label label--red">Обязательная услуга</li>
-									<li class="label label--violet">Долгосрочная услуга</li>
-									<li class="label label--blue">Онлайн</li>
-								</ul><span class="service-card__new-price">от 5 999 р. / раб. мест.</span>
-							</div>
-							<div class="service-card__rating-box"><img class="service-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating service-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="service-card__bottom-box">
-							<div class="service-card__action-list">
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue service-card__action-btn" href="#">Услуга на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Service card-->
-					<article class="service-card">
-						<div class="service-card__description-box">
-							<div class="service-card__description">
-								<ul class="service-card__label-list">
-									<li class="label label--blue">Комплексная услуга</li>
-									<li class="label label--transparent">Организация системы охраны труда</li>
-								</ul>
-								<h3 class="service-card__title">Специальная оценка условий труда (СОУТ)</h3>
-								<ul class="service-card__label-list">
-									<li class="label label--red">Обязательная услуга</li>
-									<li class="label label--violet">Долгосрочная услуга</li>
-									<li class="label label--blue">Онлайн</li>
-								</ul><span class="service-card__new-price">от 5 999 р. / раб. мест.</span>
-							</div>
-							<div class="service-card__rating-box"><img class="service-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating service-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="service-card__bottom-box">
-							<div class="service-card__action-list">
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue service-card__action-btn" href="#">Услуга на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Service card-->
-					<article class="service-card">
-						<div class="service-card__description-box">
-							<div class="service-card__description">
-								<ul class="service-card__label-list">
-									<li class="label label--blue">Комплексная услуга</li>
-									<li class="label label--transparent">Организация системы охраны труда</li>
-								</ul>
-								<h3 class="service-card__title">Специальная оценка условий труда (СОУТ)</h3>
-								<ul class="service-card__label-list">
-									<li class="label label--red">Обязательная услуга</li>
-									<li class="label label--violet">Долгосрочная услуга</li>
-									<li class="label label--blue">Онлайн</li>
-								</ul><span class="service-card__new-price">от 5 999 р. / раб. мест.</span>
-							</div>
-							<div class="service-card__rating-box"><img class="service-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating service-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="service-card__bottom-box">
-							<div class="service-card__action-list">
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue service-card__action-btn" href="#">Услуга на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Service card-->
-					<article class="service-card">
-						<div class="service-card__description-box">
-							<div class="service-card__description">
-								<ul class="service-card__label-list">
-									<li class="label label--blue">Комплексная услуга</li>
-									<li class="label label--transparent">Организация системы охраны труда</li>
-								</ul>
-								<h3 class="service-card__title">Специальная оценка условий труда (СОУТ)</h3>
-								<ul class="service-card__label-list">
-									<li class="label label--red">Обязательная услуга</li>
-									<li class="label label--violet">Долгосрочная услуга</li>
-									<li class="label label--blue">Онлайн</li>
-								</ul><span class="service-card__new-price">от 5 999 р. / раб. мест.</span>
-							</div>
-							<div class="service-card__rating-box"><img class="service-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating service-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="service-card__bottom-box">
-							<div class="service-card__action-list">
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue service-card__action-btn" href="#">Услуга на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-					<!-- Service card-->
-					<article class="service-card">
-						<div class="service-card__description-box">
-							<div class="service-card__description">
-								<ul class="service-card__label-list">
-									<li class="label label--blue">Комплексная услуга</li>
-									<li class="label label--transparent">Организация системы охраны труда</li>
-								</ul>
-								<h3 class="service-card__title">Специальная оценка условий труда (СОУТ)</h3>
-								<ul class="service-card__label-list">
-									<li class="label label--red">Обязательная услуга</li>
-									<li class="label label--violet">Долгосрочная услуга</li>
-									<li class="label label--blue">Онлайн</li>
-								</ul><span class="service-card__new-price">от 5 999 р. / раб. мест.</span>
-							</div>
-							<div class="service-card__rating-box"><img class="service-card__logo" src="images/centers/logo1.png" alt="alt"/>
-								<!-- Rating-->
-								<div class="rating service-card__rating">
-									<div class="rating__box">
-										<div class="rating__stars-row">
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star"></use>
-											</svg>
-											<svg class="rating__star">
-												<use xlink:href="#rating-star-half"></use>
-											</svg>
-										</div><span class="rating__value">4.8 / 5</span>
-									</div><span class="rating__reviews-counter">(24 отзыва)</span>
-								</div>
-							</div>
-						</div>
-						<div class="service-card__bottom-box">
-							<div class="service-card__action-list">
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#favorite"></use>
-									</svg>
-								</button>
-								<button class="service-card__action">
-									<svg class="service-card__action-icon">
-										<use xlink:href="#compare"></use>
-									</svg>
-								</button><a class="button button--blue service-card__action-btn" href="#">Услуга на сайте УЦ</a>
-							</div>
-						</div>
-					</article>
-				</div>
-				<div class="section-top-services__button-box"><a class="button button--blue" href="#">Все услуги</a></div>
-			</section>
-			<!-- Section op Centers-->
-			<section class="section-top-centers container">
-				<h2 class="heading2 section-top-centers__title">Популярные учебные центры</h2>
-				<div class="section-top-centers__grid">
-					<!-- Center Card-->
-					<div class="center-card">
-						<div class="center-card__top">
-							<div class="center-card__img-box"><img class="center-card__img" src="images/centers/logo1.png"/></div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img2.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Изменения по охране труда с 1 сентября 2024 года. Практические рекомендации.</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
 							<!-- Rating-->
-							<div class="rating rating--center-card center-card__rating">
+							<div class="rating webinar-card__rating">
 								<div class="rating__box">
 									<div class="rating__stars-row">
 										<svg class="rating__star">
@@ -944,43 +275,15 @@
 									</div><span class="rating__value">4.8 / 5</span>
 								</div><span class="rating__reviews-counter">(24 отзыва)</span>
 							</div>
-						</div>
-						<h3 class="center-card__title">Novatika</h3>
-						<ul class="center-card__data-list">
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#online-learning"></use>
-								</svg><span class="center-card__data-text">1500 курсов</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#building"></use>
-								</svg><span class="center-card__data-text">ООО «Новатика»</span>
-							</li>
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#sale-broken"></use>
-								</svg><span class="center-card__data-text">Есть промокоды</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#address-book"></use>
-								</svg><span class="center-card__data-text">3328022191</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#list"></use>
-								</svg><span class="center-card__data-text">№ Л035-01297-33/00233560 от 25.02.2022 г.</span>
-							</li>
-						</ul>
-						<div class="center-card__button-box"><a class="button button--gray center-card__btn" href="#">Подробнее</a><a class="button button--violet center-card__btn" href="#">На сайт УЦ</a></div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
-					<!-- Center Card-->
-					<div class="center-card">
-						<div class="center-card__top">
-							<div class="center-card__img-box"><img class="center-card__img" src="images/centers/logo2.png"/></div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img3.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Новый профстандарт &quot;Специалист по обучению в области ОТ&quot;</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
 							<!-- Rating-->
-							<div class="rating rating--center-card center-card__rating">
+							<div class="rating webinar-card__rating">
 								<div class="rating__box">
 									<div class="rating__stars-row">
 										<svg class="rating__star">
@@ -1001,43 +304,15 @@
 									</div><span class="rating__value">4.8 / 5</span>
 								</div><span class="rating__reviews-counter">(24 отзыва)</span>
 							</div>
-						</div>
-						<h3 class="center-card__title">Московский Институт Психологии</h3>
-						<ul class="center-card__data-list">
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#online-learning"></use>
-								</svg><span class="center-card__data-text">68 курсов</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#building"></use>
-								</svg><span class="center-card__data-text">НАНО «Московский институт психологии»</span>
-							</li>
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#sale-broken"></use>
-								</svg><span class="center-card__data-text">Есть промокоды</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#address-book"></use>
-								</svg><span class="center-card__data-text">3328022191</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#list"></use>
-								</svg><span class="center-card__data-text">№041221 от 30.12.2020г.</span>
-							</li>
-						</ul>
-						<div class="center-card__button-box"><a class="button button--gray center-card__btn" href="#">Подробнее</a><a class="button button--violet center-card__btn" href="#">На сайт УЦ</a></div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
-					<!-- Center Card-->
-					<div class="center-card">
-						<div class="center-card__top">
-							<div class="center-card__img-box"><img class="center-card__img" src="images/centers/logo3.png"/></div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img3.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Новый профстандарт &quot;Специалист по обучению в области ОТ&quot;</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
 							<!-- Rating-->
-							<div class="rating rating--center-card center-card__rating">
+							<div class="rating webinar-card__rating">
 								<div class="rating__box">
 									<div class="rating__stars-row">
 										<svg class="rating__star">
@@ -1058,43 +333,15 @@
 									</div><span class="rating__value">4.8 / 5</span>
 								</div><span class="rating__reviews-counter">(24 отзыва)</span>
 							</div>
-						</div>
-						<h3 class="center-card__title">Алгоритмика</h3>
-						<ul class="center-card__data-list">
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#online-learning"></use>
-								</svg><span class="center-card__data-text">15 курсов</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#building"></use>
-								</svg><span class="center-card__data-text">ООО «Алгоритмика»</span>
-							</li>
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#sale-broken"></use>
-								</svg><span class="center-card__data-text">Есть промокоды</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#address-book"></use>
-								</svg><span class="center-card__data-text">3328022191</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#list"></use>
-								</svg><span class="center-card__data-text">№041369 от 15.04.2021г.</span>
-							</li>
-						</ul>
-						<div class="center-card__button-box"><a class="button button--gray center-card__btn" href="#">Подробнее</a><a class="button button--violet center-card__btn" href="#">На сайт УЦ</a></div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
-					<!-- Center Card-->
-					<div class="center-card">
-						<div class="center-card__top">
-							<div class="center-card__img-box"><img class="center-card__img" src="images/centers/logo4.png"/></div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img3.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Новый профстандарт &quot;Специалист по обучению в области ОТ&quot;</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
 							<!-- Rating-->
-							<div class="rating rating--center-card center-card__rating">
+							<div class="rating webinar-card__rating">
 								<div class="rating__box">
 									<div class="rating__stars-row">
 										<svg class="rating__star">
@@ -1115,40 +362,40 @@
 									</div><span class="rating__value">4.8 / 5</span>
 								</div><span class="rating__reviews-counter">(24 отзыва)</span>
 							</div>
-						</div>
-						<h3 class="center-card__title">Skysmart</h3>
-						<ul class="center-card__data-list">
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#online-learning"></use>
-								</svg><span class="center-card__data-text">92 курса</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#building"></use>
-								</svg><span class="center-card__data-text">ОАНО ДПО «СКАЕНГ»</span>
-							</li>
-							<li class="center-card__data__row center-card__data__row--underline">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#sale-broken"></use>
-								</svg><span class="center-card__data-text">Нет промокодов</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#address-book"></use>
-								</svg><span class="center-card__data-text">3328022191</span>
-							</li>
-							<li class="center-card__data__row">
-								<svg class="center-card__data-icon">
-									<use xlink:href="#list"></use>
-								</svg><span class="center-card__data-text">№Л035-01298-77/00181469 от 06.08.2019г.</span>
-							</li>
-						</ul>
-						<div class="center-card__button-box"><a class="button button--gray center-card__btn" href="#">Подробнее</a><a class="button button--violet center-card__btn" href="#">На сайт УЦ</a></div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
+					</div>
+					<!-- Webinar card-->
+					<div class="webinar-card">
+						<div class="webinar-card__img-box"><img class="webinar-card__img" src="images/webinars/img3.jpg" alt="alt"/></div>
+						<h3 class="webinar-card__title">Новый профстандарт &quot;Специалист по обучению в области ОТ&quot;</h3>
+						<div class="webinar-card__rating-box"><img class="webinar-card__logo" src="images/centers/logo1.png" alt="alt"/>
+							<!-- Rating-->
+							<div class="rating webinar-card__rating">
+								<div class="rating__box">
+									<div class="rating__stars-row">
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star"></use>
+										</svg>
+										<svg class="rating__star">
+											<use xlink:href="#rating-star-half"></use>
+										</svg>
+									</div><span class="rating__value">4.8 / 5</span>
+								</div><span class="rating__reviews-counter">(24 отзыва)</span>
+							</div>
+						</div><a class="button button--violet webinar-card__btn" href="#">Смотреть вебинар</a>
 					</div>
 				</div>
-				<div class="section-top-centers__button-box"><a class="button button--blue" href="#">Все учебные центры</a></div>
-			</section>
+				<button class="button button--gray button--size-big page__more-btn" type="button">Показать еще</button>
+			</div>
 		</main>
 		<!-- Footer-->
 		<footer class="footer">
@@ -1283,7 +530,10 @@
 	</symbol>
 </svg>
 
-		<script src="./lib/swiper/swiper-bundle.min.js?v=1737399577872"></script>
-		<script src="./js/common.js?v=1737399577872"></script>
+		<script src="./lib/vanilla-rangeslider/js/rangeslider.min.js"></script>
+		<script src="./lib/slim-select/slimselect.min.js"></script>
+		<script src="./lib/swiper/swiper-bundle.min.js?v=1737399577530"></script>
+		<script src="./js/common.js?v=1737399577530"></script>
+		<script src="./js/filter.js"></script>
 	</body>
 </html>
