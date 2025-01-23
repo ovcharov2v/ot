@@ -171,8 +171,7 @@ body {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden; }
+          justify-content: center; }
 
 button {
   cursor: pointer; }
@@ -453,56 +452,66 @@ img {
   .range-slider .irs-handle i {
     display: none !important; }
 
-.filter__search {
-  width: 100%;
-  margin-bottom: 20px; }
-
-.filter__group {
-  margin-bottom: 16px; }
-
-.filter__group-top {
-  position: relative;
-  display: inline-block;
-  padding: 0 30px 0 0;
-  margin-bottom: 10px;
-  border: none;
-  background-color: transparent;
-  text-align: left; }
-
-.filter__group-top-text {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-.filter__group-arrow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
-  .filter__group--expanded .filter__group-arrow {
-    -webkit-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-            transform: rotate(-180deg); }
-
-.filter__group-list {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 4px; }
-  .filter__group--expanded .filter__group-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+.filter {
+  position: sticky;
+  top: 150px;
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3D4B88 #f1f1f1; }
+  .filter::-webkit-scrollbar {
+    width: 3px;
+    height: 3px; }
+  .filter::-webkit-scrollbar-track {
+    background: #f1f1f1; }
+  .filter::-webkit-scrollbar-thumb {
+    background: #3D4B88;
+    border-radius: 3px; }
+  .filter__search {
+    width: 100%;
+    margin-bottom: 20px; }
+  .filter__group {
+    margin-bottom: 16px; }
+  .filter__group-top {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px 0 0;
+    margin-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    text-align: left; }
+  .filter__group-top-text {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .filter__group-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
+    .filter__group--expanded .filter__group-arrow {
+      -webkit-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
+  .filter__group-list {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 4px; }
+    .filter__group--expanded .filter__group-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
 
 .sort-select {
   width: unset;
@@ -1686,6 +1695,42 @@ img {
     width: 22px;
     height: 22px; }
 
+.inline-filter__title {
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700; }
+
+.inline-filter__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px; }
+
+.inline-filter__link {
+  display: block;
+  background-color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease; }
+  .inline-filter__link--active {
+    background-color: #E7E7F7;
+    color: #001684; }
+  .inline-filter--about .inline-filter__link {
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 6px; }
+
 .page {
   padding-bottom: 130px; }
   .page__title {
@@ -2100,47 +2145,9 @@ img {
   .uc__filter--expanded {
     max-height: unset !important; }
   .uc__filter--about {
-    padding: 0;
+    padding: 4px;
     background-color: #fff;
     margin-bottom: 30px; }
-
-.uc__filter-title {
-  margin-bottom: 7px;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 700; }
-
-.uc__filter-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px; }
-  .uc__filter--about .uc__filter-list {
-    padding: 4px; }
-
-.uc__filter-link {
-  display: block;
-  background-color: #fff;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-  line-height: 17px;
-  white-space: nowrap;
-  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
-  transition: background-color 0.2s ease, color 0.2s ease; }
-  .uc__filter-link--active {
-    background-color: #E7E7F7;
-    color: #001684; }
-  .uc__filter--about .uc__filter-link {
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-    display: block;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 17px;
-    border-radius: 6px; }
 
 .uc__filter-btn-box {
   position: absolute;
@@ -2159,9 +2166,15 @@ img {
   height: 100px;
   padding-bottom: 20px;
   background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(transparent));
-  background: linear-gradient(to top, #fff, transparent); }
+  background: linear-gradient(to top, #fff, transparent);
+  -webkit-transition: padding 0.2s ease, background-color 0.2s ease, height 0.2s ease;
+  transition: padding 0.2s ease, background-color 0.2s ease, height 0.2s ease; }
   .uc__filter--expanded .uc__filter-btn-box {
-    display: none; }
+    position: relative;
+    background: transparent;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 0; }
 
 .uc__slide-content {
   font-size: 18px;
