@@ -5,8 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width">
 		<title>Главная</title>
-		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css?v=1737400238275">
-		<link rel="stylesheet" href="./css/main.css?v=1737400238275">
+		<link rel="stylesheet" href="./lib/swiper/swiper-bundle.min.css?v=1737638258795">
+		<link rel="stylesheet" href="./lib/slim-select/slimselect.css"">
+		<link rel="stylesheet" href="./css/main.css?v=1737638258795">
 	</head>
 	<body>
 		<!-- Header-->
@@ -21,9 +22,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="container header__content"><a class="header__logo-box" href="./main.html"><img class="header__logo" src="images/logo.png" alt="alt"/></a>
+			<div class="container header__content"><a class="header__logo-box" href="./main.html"><img class="header__logo" src="images/common/logo.png" alt="alt"/></a>
 				<div class="header__nav-box">
-					<button class="header__menu-btn">Каталог курсов
+					<button class="header__menu-btn" data-menu="courses-menu">Каталог курсов
 						<div class="header__menu-icon-box">
 							<svg class="header__menu-icon header__menu-icon--normal">
 								<use xlink:href="#menu"></use>
@@ -37,7 +38,7 @@
 						<ul class="header__nav-list">
 							<li class="header__nav-el"><a class="header__nav-link" href="#">Учебные центры</a></li>
 							<li class="header__nav-el"><a class="header__nav-link" href="#">Вебинары</a></li>
-							<li class="header__nav-el"><a class="header__nav-link" href="#">Услуги</a></li>
+							<li class="header__nav-el"><a class="header__nav-link" href="#" data-menu="services-menu">Услуги</a></li>
 							<li class="header__nav-el"><a class="header__nav-link" href="#">Промокоды</a></li>
 						</ul>
 					</nav>
@@ -57,57 +58,168 @@
 							</svg></a></li>
 				</ul>
 			</div>
-			<!-- Menu-->
-			<div class="header__menu">
-				<div class="container header__menu-container">
-					<div class="header__menu-top">
-						<div class="swiper header__menu-slider">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide header__menu-top-el header__menu-top-el--active" data-group="group1">Безопасность и охрана труда</div>
-								<div class="swiper-slide header__menu-top-el" data-group="group2">Строительство и проектирование</div>
-								<div class="swiper-slide header__menu-top-el" data-group="group3">Энергетика и экология</div>
-								<div class="swiper-slide header__menu-top-el" data-group="group4">Транспорт и логистика</div>
-								<div class="swiper-slide header__menu-top-el" data-group="group5">Технические направления</div>
-								<div class="swiper-slide header__menu-top-el" data-group="group6">Управление и менеджмент</div>
+			<!-- Menu Courses-->
+			<div class="menu" id="courses-menu">
+				<div class="container menu__container">
+					<div class="menu__top">
+						<div class="nav-slider menu__nav-slider">
+							<div class="swiper nav-slider__el" data-cols="6" data-slave="courses-nav-slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide nav-slider__slide nav-slider__slide--active" data-slide="0">Безопасность и охрана труда</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="1">Строительство и проектирование</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="2">Энергетика и экология</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="3">Транспорт и логистика</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="4">Технические направления</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="5">Управление и менеджмент</div>
+								</div>
+							</div>
+							<div class="nav-slider__btn-box">
+								<button class="nav-slider__btn nav-slider__btn--prev" type="button">
+									<svg class="nav-slider__btn-icon">
+										<use xlink:href="#arrow-outlined"></use>
+									</svg>
+								</button>
+								<button class="nav-slider__btn nav-slider__btn--next" type="button">
+									<svg class="nav-slider__btn-icon">
+										<use xlink:href="#arrow-outlined"></use>
+									</svg>
+								</button>
 							</div>
 						</div>
 					</div>
-					<div class="header__menu-content">
-						<div class="header__menu-content-box header__menu-content-box--active" id="group1">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Безопасность и охрана труда</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+					<div class="swiper menu__content-slider" id="courses-nav-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Безопасность и охрана труда</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link menu__link--active" href="#">Охрана труда</a><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a><a class="menu__link" href="#">Антитеррористическая безопасность</a><a class="menu__link" href="#">Работы повышенной опасности</a><a class="menu__link" href="#">Первая помощь</a></div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link header__menu-link--active" href="#">Охрана труда</a><a class="header__menu-link" href="#">Промышленная безопасность</a><a class="header__menu-link" href="#">Пожарная безопасность</a><a class="header__menu-link" href="#">Радиационная безопасность</a><a class="header__menu-link" href="#">Антитеррористическая безопасность</a><a class="header__menu-link" href="#">Работы повышенной опасности</a><a class="header__menu-link" href="#">Первая помощь</a></div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Строительство и проектирование</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Антитеррористическая безопасность</a><a class="menu__link" href="#">Работы повышенной опасности</a><a class="menu__link" href="#">Первая помощь</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Энергетика и экология</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Транспорт и логистика</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Охрана труда</a><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Технические направления</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Управление и менеджмент</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Охрана труда</a><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a><a class="menu__link" href="#">Антитеррористическая безопасность</a><a class="menu__link" href="#">Работы повышенной опасности</a><a class="menu__link" href="#">Первая помощь</a></div>
+								</div>
+							</div>
 						</div>
-						<div class="header__menu-content-box" id="group2">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Строительство и проектирование</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+					</div>
+				</div>
+			</div>
+			<!-- Menu Services-->
+			<div class="menu" id="services-menu">
+				<div class="container menu__container">
+					<div class="menu__top">
+						<div class="nav-slider menu__nav-slider">
+							<div class="swiper nav-slider__el" data-cols="5" data-slave="services-nav-slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide nav-slider__slide nav-slider__slide--active" data-slide="0">Организация системы охраны труда</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="1">СОУТ</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="2">Аудит и консалтинг в области охраны труда</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="3">Пожарная безопасность</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="4">Экологическая безопасность</div>
+									<div class="swiper-slide nav-slider__slide" data-slide="5">СОУТ</div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link" href="#">Антитеррористическая безопасность</a><a class="header__menu-link" href="#">Работы повышенной опасности</a><a class="header__menu-link" href="#">Первая помощь</a></div>
+							<div class="nav-slider__btn-box">
+								<button class="nav-slider__btn nav-slider__btn--prev" type="button">
+									<svg class="nav-slider__btn-icon">
+										<use xlink:href="#arrow-outlined"></use>
+									</svg>
+								</button>
+								<button class="nav-slider__btn nav-slider__btn--next" type="button">
+									<svg class="nav-slider__btn-icon">
+										<use xlink:href="#arrow-outlined"></use>
+									</svg>
+								</button>
+							</div>
 						</div>
-						<div class="header__menu-content-box" id="group3">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Энергетика и экология</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+					</div>
+					<div class="swiper menu__content-slider" id="services-nav-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Организация системы охраны труда</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link menu__link--active" href="#">Разработка и внедрение системы управления охраной труда (СУОТ)</a><a class="menu__link" href="#">Проведение аттестации рабочих мест по условиям труда (СОУТ)</a><a class="menu__link" href="#">Разработка и актуализация локальных нормативных актов</a><a class="menu__link" href="#">Обучение персонала основам охраны труда</a></div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link" href="#">Промышленная безопасность</a><a class="header__menu-link" href="#">Пожарная безопасность</a><a class="header__menu-link" href="#">Радиационная безопасность</a></div>
-						</div>
-						<div class="header__menu-content-box" id="group4">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Транспорт и логистика</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">СОУТ</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Антитеррористическая безопасность</a><a class="menu__link" href="#">Работы повышенной опасности</a><a class="menu__link" href="#">Первая помощь</a></div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link" href="#">Охрана труда</a><a class="header__menu-link" href="#">Промышленная безопасность</a><a class="header__menu-link" href="#">Радиационная безопасность</a></div>
-						</div>
-						<div class="header__menu-content-box" id="group5">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Технические направления</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Аудит и консалтинг в области охраны труда</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link" href="#">Пожарная безопасность</a><a class="header__menu-link" href="#">Радиационная безопасность</a></div>
-						</div>
-						<div class="header__menu-content-box" id="group6">
-							<div class="header__menu-title-box">
-								<p class="heading3 header__menu-title">Управление и менеджмент</p><a class="header__menu-title-link" href="#">Перейти в раздел</a>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">Пожарная безопасность</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Охрана труда</a><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
 							</div>
-							<div class="header__menu-links-list"><a class="header__menu-link" href="#">Охрана труда</a><a class="header__menu-link" href="#">Промышленная безопасность</a><a class="header__menu-link" href="#">Пожарная безопасность</a><a class="header__menu-link" href="#">Радиационная безопасность</a><a class="header__menu-link" href="#">Антитеррористическая безопасность</a><a class="header__menu-link" href="#">Работы повышенной опасности</a><a class="header__menu-link" href="#">Первая помощь</a></div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">ТЭкологическая безопасность</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="menu__content-slide">
+									<div class="menu__title-box">
+										<p class="heading3 menu__title">СОУТ</p><a class="menu__title-link" href="#">Перейти в раздел</a>
+									</div>
+									<div class="menu__links-list"><a class="menu__link" href="#">Охрана труда</a><a class="menu__link" href="#">Промышленная безопасность</a><a class="menu__link" href="#">Пожарная безопасность</a><a class="menu__link" href="#">Радиационная безопасность</a><a class="menu__link" href="#">Антитеррористическая безопасность</a><a class="menu__link" href="#">Работы повышенной опасности</a><a class="menu__link" href="#">Первая помощь</a></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1154,7 +1266,7 @@
 		<footer class="footer">
 			<div class="footer__nav-box">
 				<div class="container footer__nav-container">
-					<div class="footer__text-box"><a class="footer__logo-box" href="./main.html"><img class="footer__logo" src="images/logo-white.svg" alt="alt"/></a>
+					<div class="footer__text-box"><a class="footer__logo-box" href="./main.html"><img class="footer__logo" src="images/common/logo-white.svg" alt="alt"/></a>
 						<p class="footer__text">Информация о курсах и обучающих программах не является офертой, носит ознакомительный характер. Точные условия размещены на официальных сайтах школ, авторов курсов и учебных заведений.</p>
 						<p class="footer__text">Сайт использует файлы cookie для повышения удобства пользователей и улучшения работы сайта.</p>
 					</div>
@@ -1213,6 +1325,12 @@
 				</div>
 			</div>
 		</footer><svg width="0" height="0" class="hidden">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="good-o">
+		<path d="M10.0005 1.34149C5.22604 1.34149 1.34204 5.22549 1.34204 9.99999C1.34204 14.7745 5.22654 18.6585 10.0005 18.6585C14.7745 18.6585 18.658 14.774 18.658 9.99999C18.658 5.22599 14.7745 1.34149 10.0005 1.34149ZM10.0005 17.9085C5.63954 17.9085 2.09204 14.3605 2.09204 9.99999C2.09204 5.63949 5.63954 2.09149 10.0005 2.09149C14.361 2.09149 17.908 5.63949 17.908 9.99999C17.908 14.3605 14.361 17.9085 10.0005 17.9085Z" fill="currentColor"></path>
+		<path d="M13.236 11.8275L12.952 11.6495C12.9313 11.636 12.908 11.6269 12.8837 11.6228C12.8594 11.6187 12.8344 11.6196 12.8105 11.6255C12.7865 11.6309 12.7639 11.641 12.7439 11.6553C12.7239 11.6695 12.7069 11.6876 12.694 11.7085C12.4101 12.1652 12.0143 12.5417 11.544 12.8024C11.0737 13.0631 10.5446 13.1993 10.007 13.198C9.46601 13.1998 8.93372 13.0623 8.46134 12.7987C7.98897 12.5351 7.59244 12.1543 7.30995 11.693C7.28373 11.6508 7.24188 11.6207 7.19353 11.6093C7.14519 11.5979 7.09429 11.606 7.05195 11.632L6.76595 11.8085C6.72366 11.8346 6.69347 11.8765 6.68203 11.9249C6.67059 11.9733 6.67884 12.0242 6.70495 12.0665C7.05131 12.6307 7.53696 13.0963 8.11522 13.4187C8.69349 13.741 9.34493 13.9091 10.007 13.907C10.6648 13.9089 11.3123 13.7426 11.8878 13.4239C12.4634 13.1052 12.9479 12.6446 13.2955 12.086C13.3085 12.0651 13.3174 12.0419 13.3214 12.0176C13.3255 11.9933 13.3248 11.9684 13.3193 11.9444C13.3137 11.9204 13.3035 11.8977 13.2892 11.8777C13.2749 11.8576 13.2568 11.8406 13.236 11.8275Z" fill="currentColor"></path>
+		<path d="M7.6326 8.28002C7.92089 8.28002 8.1546 8.04632 8.1546 7.75802C8.1546 7.46973 7.92089 7.23602 7.6326 7.23602C7.3443 7.23602 7.1106 7.46973 7.1106 7.75802C7.1106 8.04632 7.3443 8.28002 7.6326 8.28002Z" fill="currentColor"></path>
+		<path d="M12.2014 8.28002C12.4897 8.28002 12.7234 8.04632 12.7234 7.75802C12.7234 7.46973 12.4897 7.23602 12.2014 7.23602C11.9132 7.23602 11.6794 7.46973 11.6794 7.75802C11.6794 8.04632 11.9132 8.28002 12.2014 8.28002Z" fill="currentColor"></path>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="list">
 		<path d="M7.50008 4.16675H5.83341C5.39139 4.16675 4.96746 4.34234 4.6549 4.6549C4.34234 4.96746 4.16675 5.39139 4.16675 5.83341V15.8334C4.16675 16.2754 4.34234 16.6994 4.6549 17.0119C4.96746 17.3245 5.39139 17.5001 5.83341 17.5001H14.1667C14.6088 17.5001 15.0327 17.3245 15.3453 17.0119C15.6578 16.6994 15.8334 16.2754 15.8334 15.8334V5.83341C15.8334 5.39139 15.6578 4.96746 15.3453 4.6549C15.0327 4.34234 14.6088 4.16675 14.1667 4.16675H12.5001" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M7.5 10H7.50833M10.8333 10H12.5M7.5 13.3333H7.50833M10.8333 13.3333H12.5M7.5 4.16667C7.5 3.72464 7.6756 3.30072 7.98816 2.98816C8.30072 2.67559 8.72464 2.5 9.16667 2.5H10.8333C11.2754 2.5 11.6993 2.67559 12.0118 2.98816C12.3244 3.30072 12.5 3.72464 12.5 4.16667C12.5 4.60869 12.3244 5.03262 12.0118 5.34518C11.6993 5.65774 11.2754 5.83333 10.8333 5.83333H9.16667C8.72464 5.83333 8.30072 5.65774 7.98816 5.34518C7.6756 5.03262 7.5 4.60869 7.5 4.16667Z" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1220,11 +1338,30 @@
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="menu">
 		<path d="M2 6.495C2 5.945 2.446 5.5 2.995 5.5H11.005C11.2689 5.5 11.522 5.60483 11.7086 5.79143C11.8952 5.97803 12 6.23111 12 6.495C12 6.75889 11.8952 7.01197 11.7086 7.19857C11.522 7.38517 11.2689 7.49 11.005 7.49H2.995C2.73111 7.49 2.47803 7.38517 2.29143 7.19857C2.10483 7.01197 2 6.75889 2 6.495ZM2 12.5C2 11.95 2.446 11.505 2.995 11.505H21.005C21.2689 11.505 21.522 11.6098 21.7086 11.7964C21.8952 11.983 22 12.2361 22 12.5C22 12.7639 21.8952 13.017 21.7086 13.2036C21.522 13.3902 21.2689 13.495 21.005 13.495H2.995C2.73111 13.495 2.47803 13.3902 2.29143 13.2036C2.10483 13.017 2 12.7639 2 12.5ZM2.995 17.51C2.73111 17.51 2.47803 17.6148 2.29143 17.8014C2.10483 17.988 2 18.2411 2 18.505C2 18.7689 2.10483 19.022 2.29143 19.2086C2.47803 19.3952 2.73111 19.5 2.995 19.5H15.005C15.2689 19.5 15.522 19.3952 15.7086 19.2086C15.8952 19.022 16 18.7689 16 18.505C16 18.2411 15.8952 17.988 15.7086 17.8014C15.522 17.6148 15.2689 17.51 15.005 17.51H2.995Z" fill="currentColor"></path>
 	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="menu-close">
+		<path d="M12 12.5L19 19.5M12 12.5L5 5.5M12 12.5L5 19.5M12 12.5L19 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="minus">
+		<path d="M18.2492 10H9.99958H1.75" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="online-learning">
 		<path d="M5.48583 6.0317C7.99167 6.47336 9.485 7.39753 10 7.92836C10.515 7.39753 12.0083 6.47336 14.515 6.0317C15.7842 5.80753 16.4192 5.69586 16.9592 6.12503C17.5 6.55336 17.5 7.25003 17.5 8.64336V13.6492C17.5 14.9234 17.5 15.56 17.1533 15.9575C16.8058 16.355 16.0425 16.49 14.515 16.7592C13.1525 16.9992 12.09 17.3817 11.3208 17.7659C10.5633 18.1442 10.185 18.3334 10 18.3334M10 18.3334C9.815 18.3334 9.43583 18.1442 8.67917 17.7667C7.91 17.3817 6.8475 16.9992 5.48583 16.7584C3.9575 16.49 3.19417 16.355 2.84667 15.9575C2.49917 15.56 2.5 14.9234 2.5 13.6492V8.64336C2.5 7.25003 2.5 6.55336 3.04083 6.12503C3.58083 5.69586 4.21583 5.80836 5.485 6.0317M10 18.3334V7.50003M7.08333 2.5492C7.94709 1.97253 8.9627 1.66545 10.0013 1.66694C11.0398 1.66842 12.0546 1.9784 12.9167 2.55753M11.3517 4.58336C10.9445 4.33602 10.4776 4.20452 10.0012 4.20305C9.52476 4.20158 9.05701 4.3302 8.64833 4.57503" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="plus">
+		<g clip-path="url(#clip0_40_119)">
+			<path d="M9.99958 10H18.2492M9.99958 10H1.75M9.99958 10V18.2496M9.99958 10V1.75042" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+		</g>
+		<defs>
+			<clipPath id="clip0_40_119">
+				<rect width="20" height="20" fill="white" transform="matrix(0 -1 1 0 0 20)"></rect>
+			</clipPath>
+		</defs>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="rating-star">
 		<path d="M6.76882 4.10534C7.61349 2.59068 8.03549 1.83334 8.66682 1.83334C9.29816 1.83334 9.72016 2.59068 10.5648 4.10534L10.7835 4.49734C11.0235 4.92801 11.1435 5.14334 11.3302 5.28534C11.5168 5.42734 11.7502 5.48001 12.2168 5.58534L12.6408 5.68134C14.2808 6.05268 15.1002 6.23801 15.2955 6.86534C15.4902 7.49201 14.9315 8.14601 13.8135 9.45334L13.5242 9.79134C13.2068 10.1627 13.0475 10.3487 12.9762 10.578C12.9048 10.808 12.9288 11.056 12.9768 11.5513L13.0208 12.0027C13.1895 13.7473 13.2742 14.6193 12.7635 15.0067C12.2528 15.394 11.4848 15.0407 9.95016 14.334L9.55216 14.1513C9.11616 13.95 8.89816 13.85 8.66682 13.85C8.43549 13.85 8.21749 13.95 7.78149 14.1513L7.38416 14.334C5.84882 15.0407 5.08082 15.394 4.57082 15.0073C4.05949 14.6193 4.14416 13.7473 4.31282 12.0027L4.35682 11.552C4.40482 11.056 4.42882 10.808 4.35682 10.5787C4.28616 10.3487 4.12682 10.1627 3.80949 9.79201L3.52016 9.45334C2.40216 8.14668 1.84349 7.49268 2.03816 6.86534C2.23282 6.23801 3.05349 6.05201 4.69349 5.68134L5.11749 5.58534C5.58349 5.48001 5.81616 5.42734 6.00349 5.28534C6.19082 5.14334 6.31016 4.92801 6.55016 4.49734L6.76882 4.10534Z" fill="#FFCD0E"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="rating-star-empty">
+		<path d="M6.76882 4.10534C7.61349 2.59068 8.03549 1.83334 8.66682 1.83334C9.29816 1.83334 9.72016 2.59068 10.5648 4.10534L10.7835 4.49734C11.0235 4.92801 11.1435 5.14334 11.3302 5.28534C11.5168 5.42734 11.7502 5.48001 12.2168 5.58534L12.6408 5.68134C14.2808 6.05268 15.1002 6.23801 15.2955 6.86534C15.4902 7.49201 14.9315 8.14601 13.8135 9.45334L13.5242 9.79134C13.2068 10.1627 13.0475 10.3487 12.9762 10.578C12.9048 10.808 12.9288 11.056 12.9768 11.5513L13.0208 12.0027C13.1895 13.7473 13.2742 14.6193 12.7635 15.0067C12.2528 15.394 11.4848 15.0407 9.95016 14.334L9.55216 14.1513C9.11616 13.95 8.89816 13.85 8.66682 13.85C8.43549 13.85 8.21749 13.95 7.78149 14.1513L7.38416 14.334C5.84882 15.0407 5.08082 15.394 4.57082 15.0073C4.05949 14.6193 4.14416 13.7473 4.31282 12.0027L4.35682 11.552C4.40482 11.056 4.42882 10.808 4.35682 10.5787C4.28616 10.3487 4.12682 10.1627 3.80949 9.79201L3.52016 9.45334C2.40216 8.14668 1.84349 7.49268 2.03816 6.86534C2.23282 6.23801 3.05349 6.05201 4.69349 5.68134L5.11749 5.58534C5.58349 5.48001 5.81616 5.42734 6.00349 5.28534C6.19082 5.14334 6.31016 4.92801 6.55016 4.49734L6.76882 4.10534Z" stroke="#FFCD0E" stroke-width="1.42857" fill="#ffffff"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="rating-star-half">
 		<path d="M7.2679 4.38366L7.26786 4.38372L7.04931 4.77551C7.04927 4.77558 7.04923 4.77565 7.04919 4.77572C7.0346 4.8019 7.02017 4.82791 7.00585 4.85373C6.80956 5.20752 6.63352 5.52481 6.34868 5.74073C6.05988 5.95964 5.70913 6.03827 5.32339 6.12475C5.29698 6.13067 5.2704 6.13662 5.24368 6.14266C5.24361 6.14268 5.24354 6.14269 5.24348 6.14271L4.81968 6.23867L4.81946 6.23871C3.98014 6.42841 3.41708 6.55748 3.03335 6.70872C2.66026 6.85577 2.60485 6.96723 2.58391 7.0347C2.5609 7.10887 2.54698 7.24507 2.77051 7.60019C2.9979 7.96146 3.38316 8.41426 3.95435 9.08185L3.95462 9.08217L4.24357 9.42039C4.24366 9.42049 4.24374 9.42059 4.24383 9.42069C4.26175 9.44162 4.27957 9.46237 4.29726 9.48296C4.56172 9.79088 4.79659 10.0643 4.90305 10.4108C5.00949 10.7529 4.97417 11.1124 4.93374 11.5237C4.93103 11.5513 4.92831 11.579 4.92559 11.6071L4.92555 11.6075L4.8816 12.0577C4.79549 12.9484 4.73826 13.5539 4.75768 13.9882C4.77703 14.4209 4.86775 14.5153 4.91606 14.552C4.9541 14.5808 5.04704 14.6427 5.43552 14.5314C5.83099 14.418 6.35941 14.1766 7.14524 13.8149L7.14547 13.8148L7.54193 13.6326C7.54206 13.6325 7.5422 13.6324 7.54234 13.6324C7.56674 13.6211 7.59099 13.6098 7.6151 13.5987C7.97538 13.4315 8.30515 13.2786 8.66682 13.2786C9.0285 13.2786 9.35826 13.4315 9.71853 13.5987C9.7425 13.6098 9.7666 13.621 9.79086 13.6322C9.79114 13.6323 9.79143 13.6324 9.79172 13.6326L10.1885 13.8147L10.1892 13.815C10.9747 14.1767 11.5028 14.418 11.8982 14.5313C12.2863 14.6425 12.3796 14.5807 12.4182 14.5514C12.4658 14.5152 12.5567 14.4216 12.576 13.9882C12.5954 13.554 12.5382 12.9484 12.452 12.0577L12.4081 11.6068L12.4081 11.6065C12.4054 11.5787 12.4027 11.5513 12.4 11.524C12.3594 11.1111 12.324 10.7516 12.4304 10.4087L12.4305 10.4083C12.5375 10.0642 12.7712 9.79175 13.0351 9.48387C13.0532 9.46279 13.0714 9.44155 13.0897 9.42011L13.0901 9.41974L13.3792 9.08196C13.3793 9.08189 13.3793 9.08181 13.3794 9.08174C13.9505 8.41392 14.3357 7.96098 14.5631 7.59969C14.7868 7.24439 14.7727 7.10849 14.7498 7.03486C14.7285 6.96685 14.6724 6.8556 14.3004 6.70896C13.9168 6.55778 13.3541 6.42873 12.5146 6.23867L12.091 6.14275L7.2679 4.38366ZM7.2679 4.38366C7.69957 3.60958 7.99293 3.0864 8.25149 2.74878C8.50974 2.41158 8.62517 2.40477 8.66682 2.40477C8.70848 2.40477 8.82391 2.41158 9.08215 2.74878C9.34071 3.0864 9.63408 3.60958 10.0658 4.38366L10.0658 4.38372M7.2679 4.38366L10.0658 4.38372M10.0658 4.38372L10.2843 4.77551M10.0658 4.38372L10.2843 4.77551M10.2843 4.77551C10.2983 4.80054 10.3121 4.8254 10.3258 4.85008C10.5234 5.20612 10.6997 5.52374 10.9842 5.74014C11.2726 5.95955 11.6246 6.03832 12.0101 6.12459C12.0368 6.13056 12.0636 6.13657 12.0906 6.14266L10.2843 4.77551Z" fill="white" stroke="#FFCD0E" stroke-width="1.14286"></path>
@@ -1248,8 +1385,8 @@
 		<path d="M10 2.5C5.85938 2.5 2.5 5.85938 2.5 10C2.5 14.1406 5.85938 17.5 10 17.5C14.1406 17.5 17.5 14.1406 17.5 10C17.5 5.85938 14.1406 2.5 10 2.5Z" stroke="currentColor" stroke-width="0.8" stroke-miterlimit="10"></path>
 		<path d="M10 5V10.625H13.75" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="menu-close">
-		<path d="M12 12.5L19 19.5M12 12.5L5 5.5M12 12.5L5 19.5M12 12.5L19 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 22" id="trash">
+		<path d="M15.5006 5.75L14.8332 16.2613C14.7748 17.1819 14.7456 17.6422 14.5562 17.9912C14.3895 18.2985 14.138 18.5456 13.8349 18.6998C13.4907 18.875 13.0512 18.875 12.1725 18.875H8.82879C7.95004 18.875 7.51067 18.875 7.16639 18.6998C6.86329 18.5456 6.61181 18.2985 6.44508 17.9912C6.25571 17.6422 6.22648 17.1819 6.16803 16.2613L5.50065 5.75M3.83398 5.75H17.1673M13.834 5.75L13.6085 5.03956C13.3899 4.35109 13.2806 4.00686 13.0779 3.75236C12.8989 3.52761 12.6691 3.35366 12.4094 3.24643C12.1153 3.125 11.7698 3.125 11.0787 3.125H9.92265C9.23148 3.125 8.88598 3.125 8.59191 3.24643C8.33225 3.35366 8.10238 3.52761 7.92339 3.75236C7.72069 4.00686 7.61142 4.35109 7.39285 5.03956L7.16732 5.75" stroke="currentColor" stroke-width="0.85" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="address-book">
 		<path d="M8.33333 13.3335H13.3333M16.6667 5.00016V15.0002C16.6667 15.4422 16.4911 15.8661 16.1785 16.1787C15.866 16.4912 15.442 16.6668 15 16.6668H6.66667C6.22464 16.6668 5.80072 16.4912 5.48816 16.1787C5.17559 15.8661 5 15.4422 5 15.0002V5.00016C5 4.55814 5.17559 4.13421 5.48816 3.82165C5.80072 3.50909 6.22464 3.3335 6.66667 3.3335H15C15.442 3.3335 15.866 3.50909 16.1785 3.82165C16.4911 4.13421 16.6667 4.55814 16.6667 5.00016Z" stroke="currentColor" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1258,15 +1395,21 @@
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="arrow-down">
 		<path d="M12.6735 5.95L13.5745 6.85185L8.6641 11.764C8.58542 11.8432 8.49185 11.906 8.38879 11.9489C8.28573 11.9918 8.1752 12.0139 8.06357 12.0139C7.95195 12.0139 7.84142 11.9918 7.73836 11.9489C7.6353 11.906 7.54173 11.8432 7.46305 11.764L2.55005 6.85185L3.45105 5.95085L8.0623 10.5612L12.6735 5.95Z" fill="currentColor"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="briefcase">
-		<path d="M12 10.5V7.5C12 6.70435 12.3161 5.94129 12.8787 5.37868C13.4413 4.81607 14.2044 4.5 15 4.5H21C21.7956 4.5 22.5587 4.81607 23.1213 5.37868C23.6839 5.94129 24 6.70435 24 7.5V10.5M18 18V18.015M4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5H28.5C29.2956 10.5 30.0587 10.8161 30.6213 11.3787C31.1839 11.9413 31.5 12.7044 31.5 13.5V27C31.5 27.7956 31.1839 28.5587 30.6213 29.1213C30.0587 29.6839 29.2956 30 28.5 30H7.5C6.70435 30 5.94129 29.6839 5.37868 29.1213C4.81607 28.5587 4.5 27.7956 4.5 27V13.5Z" stroke="currentColor" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M4.5 19.5C8.68737 21.61 13.311 22.7091 18 22.7091C22.689 22.7091 27.3126 21.61 31.5 19.5" stroke="currentColor" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39" id="arrow-outlined">
+		<path d="M13.6497 9.9255L15.7187 7.8585L26.9877 19.1237C27.1694 19.3042 27.3135 19.5188 27.4119 19.7552C27.5103 19.9917 27.5609 20.2452 27.5609 20.5013C27.5609 20.7574 27.5103 21.011 27.4119 21.2474C27.3135 21.4838 27.1694 21.6985 26.9877 21.879L15.7187 33.15L13.6517 31.083L24.2285 20.5043L13.6497 9.9255Z" fill="currentColor"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="asterisk">
 		<path d="M12 12L20 7.5M12 12V21M12 12L4 7.5M12 12L20 16.5M12 12V3M12 12L4 16.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" id="briefcase">
+		<path d="M12 10.5V7.5C12 6.70435 12.3161 5.94129 12.8787 5.37868C13.4413 4.81607 14.2044 4.5 15 4.5H21C21.7956 4.5 22.5587 4.81607 23.1213 5.37868C23.6839 5.94129 24 6.70435 24 7.5V10.5M18 18V18.015M4.5 13.5C4.5 12.7044 4.81607 11.9413 5.37868 11.3787C5.94129 10.8161 6.70435 10.5 7.5 10.5H28.5C29.2956 10.5 30.0587 10.8161 30.6213 11.3787C31.1839 11.9413 31.5 12.7044 31.5 13.5V27C31.5 27.7956 31.1839 28.5587 30.6213 29.1213C30.0587 29.6839 29.2956 30 28.5 30H7.5C6.70435 30 5.94129 29.6839 5.37868 29.1213C4.81607 28.5587 4.5 27.7956 4.5 27V13.5Z" stroke="currentColor" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M4.5 19.5C8.68737 21.61 13.311 22.7091 18 22.7091C22.689 22.7091 27.3126 21.61 31.5 19.5" stroke="currentColor" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="building">
 		<path d="M2.5 17.5H17.5M7.5 6.66667H8.33333M7.5 10H8.33333M7.5 13.3333H8.33333M11.6667 6.66667H12.5M11.6667 10H12.5M11.6667 13.3333H12.5M4.16667 17.5V4.16667C4.16667 3.72464 4.34226 3.30072 4.65482 2.98816C4.96738 2.67559 5.39131 2.5 5.83333 2.5H14.1667C14.6087 2.5 15.0326 2.67559 15.3452 2.98816C15.6577 3.30072 15.8333 3.72464 15.8333 4.16667V17.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="close">
+		<path d="M15.0004 15.8849L8.44291 22.4424C8.32624 22.5591 8.18291 22.6216 8.01291 22.6299C7.84291 22.6383 7.69124 22.5758 7.55791 22.4424C7.42458 22.3091 7.35791 22.1616 7.35791 21.9999C7.35791 21.8383 7.42458 21.6908 7.55791 21.5574L14.1154 14.9999L7.55791 8.44242C7.44124 8.32576 7.37874 8.18242 7.37041 8.01242C7.36208 7.84242 7.42458 7.69076 7.55791 7.55742C7.69124 7.42409 7.83874 7.35742 8.00041 7.35742C8.16208 7.35742 8.30958 7.42409 8.44291 7.55742L15.0004 14.1149L21.5579 7.55742C21.6746 7.44076 21.8183 7.37825 21.9892 7.36992C22.1583 7.36159 22.3096 7.42409 22.4429 7.55742C22.5762 7.69076 22.6429 7.83826 22.6429 7.99992C22.6429 8.16159 22.5762 8.30909 22.4429 8.44242L15.8854 14.9999L22.4429 21.5574C22.5596 21.6741 22.6221 21.8178 22.6304 21.9887C22.6387 22.1578 22.5762 22.3091 22.4429 22.4424C22.3096 22.5758 22.1621 22.6424 22.0004 22.6424C21.8387 22.6424 21.6912 22.5758 21.5579 22.4424L15.0004 15.8849Z" fill="currentColor"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31" id="compare">
 		<path d="M15 12.375V3M15 12.375L7.5 14.25M15 12.375L22.5 10.5M7.5 14.25L12.5 23M7.5 14.25L2.5 23M22.5 10.5L17.5 19.25M22.5 10.5L27.5 19.25" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -1275,15 +1418,10 @@
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31" id="favorite">
 		<path d="M17.7127 25.7946C17.3592 26.1538 16.9377 26.439 16.4729 26.6336C16.0081 26.8283 15.5092 26.9286 15.0052 26.9286C14.5013 26.9286 14.0024 26.8283 13.5376 26.6336C13.0727 26.439 12.6513 26.1538 12.2977 25.7946L3.19274 16.7775C-2.89298 10.6875 5.05702 -2.76538 15.002 7.18176C24.932 -2.74609 32.882 10.7046 26.8113 16.7775L17.7127 25.7946Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="good-o">
-		<path d="M10.0005 1.34149C5.22604 1.34149 1.34204 5.22549 1.34204 9.99999C1.34204 14.7745 5.22654 18.6585 10.0005 18.6585C14.7745 18.6585 18.658 14.774 18.658 9.99999C18.658 5.22599 14.7745 1.34149 10.0005 1.34149ZM10.0005 17.9085C5.63954 17.9085 2.09204 14.3605 2.09204 9.99999C2.09204 5.63949 5.63954 2.09149 10.0005 2.09149C14.361 2.09149 17.908 5.63949 17.908 9.99999C17.908 14.3605 14.361 17.9085 10.0005 17.9085Z" fill="currentColor"></path>
-		<path d="M13.236 11.8275L12.952 11.6495C12.9313 11.636 12.908 11.6269 12.8837 11.6228C12.8594 11.6187 12.8344 11.6196 12.8105 11.6255C12.7865 11.6309 12.7639 11.641 12.7439 11.6553C12.7239 11.6695 12.7069 11.6876 12.694 11.7085C12.4101 12.1652 12.0143 12.5417 11.544 12.8024C11.0737 13.0631 10.5446 13.1993 10.007 13.198C9.46601 13.1998 8.93372 13.0623 8.46134 12.7987C7.98897 12.5351 7.59244 12.1543 7.30995 11.693C7.28373 11.6508 7.24188 11.6207 7.19353 11.6093C7.14519 11.5979 7.09429 11.606 7.05195 11.632L6.76595 11.8085C6.72366 11.8346 6.69347 11.8765 6.68203 11.9249C6.67059 11.9733 6.67884 12.0242 6.70495 12.0665C7.05131 12.6307 7.53696 13.0963 8.11522 13.4187C8.69349 13.741 9.34493 13.9091 10.007 13.907C10.6648 13.9089 11.3123 13.7426 11.8878 13.4239C12.4634 13.1052 12.9479 12.6446 13.2955 12.086C13.3085 12.0651 13.3174 12.0419 13.3214 12.0176C13.3255 11.9933 13.3248 11.9684 13.3193 11.9444C13.3137 11.9204 13.3035 11.8977 13.2892 11.8777C13.2749 11.8576 13.2568 11.8406 13.236 11.8275Z" fill="currentColor"></path>
-		<path d="M7.6326 8.28002C7.92089 8.28002 8.1546 8.04632 8.1546 7.75802C8.1546 7.46973 7.92089 7.23602 7.6326 7.23602C7.3443 7.23602 7.1106 7.46973 7.1106 7.75802C7.1106 8.04632 7.3443 8.28002 7.6326 8.28002Z" fill="currentColor"></path>
-		<path d="M12.2014 8.28002C12.4897 8.28002 12.7234 8.04632 12.7234 7.75802C12.7234 7.46973 12.4897 7.23602 12.2014 7.23602C11.9132 7.23602 11.6794 7.46973 11.6794 7.75802C11.6794 8.04632 11.9132 8.28002 12.2014 8.28002Z" fill="currentColor"></path>
-	</symbol>
 </svg>
 
-		<script src="./lib/swiper/swiper-bundle.min.js?v=1737400238279"></script>
-		<script src="./js/common.js?v=1737400238279"></script>
+		<script src="./lib/swiper/swiper-bundle.min.js?v=1737638258805"></script>
+		<script src="./lib/slim-select/slimselect.min.js"></script>
+		<script src="./js/common.js?v=1737638258805"></script>
 	</body>
 </html>
