@@ -1,4 +1,24 @@
 .filter {
+	position: sticky;
+	top: 150px;
+	max-height: calc(100vh - 170px);
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #3D4B88 #f1f1f1;
+	&::-webkit-scrollbar {
+		width: 3px;
+		height: 3px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #3D4B88;
+		border-radius: 3px;
+	}
+
 	&__search {
 		width: 100%;
 		margin-bottom: 20px;

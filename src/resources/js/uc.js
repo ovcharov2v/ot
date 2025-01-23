@@ -5,8 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		filterBoxList.forEach((filterBox) => {
 			const btn = filterBox.querySelector('.uc__filter-btn')
 			if(btn) {
+				const defaultText = btn.innerText
 				btn.addEventListener('click', () => {
-					filterBox.classList.toggle('uc__filter--expanded')
+					if(filterBox.classList.contains('uc__filter--expanded')) {
+						filterBox.classList.remove('uc__filter--expanded')
+						btn.innerText = defaultText
+					}
+					else {
+						filterBox.classList.add('uc__filter--expanded')
+						btn.innerText = 'Скрыть'
+					}
+
 					// ------- Костыль для обновления высота слайда
 					const slider = filterBox.closest('.swiper')
 					if(slider) {

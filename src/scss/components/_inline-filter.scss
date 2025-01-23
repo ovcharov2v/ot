@@ -1,0 +1,45 @@
+.inline-filter {
+	&__title {
+		margin-bottom: 7px;
+		font-size: 14px;
+		line-height: 17px;
+		font-weight: 700;
+	}
+
+	&__list {display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		.inline-filter--about & {
+			//padding: 4px;
+		}
+	}
+
+	&__el {
+	}
+
+	&__link {
+		display: block;
+		background-color: #fff;
+		padding: 4px 10px;
+		border-radius: 6px;
+		font-size: 14px;
+		line-height: 17px;
+		white-space: nowrap;
+		transition: background-color $transition-default, color $transition-default;
+
+		&--active {
+			background-color: #E7E7F7;
+			color: #001684;
+		}
+
+		.inline-filter--about & {
+			@include main-shadow;
+			display: block;
+			padding: 8px 12px;
+			font-size: 14px;
+			line-height: 17px;
+			border-radius: 6px;
+		}
+	}
+}
