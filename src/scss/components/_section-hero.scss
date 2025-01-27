@@ -1,14 +1,24 @@
 .section-hero {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	@include desktop {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__box {
 		@include main-shadow;
-		display: flex;
-		justify-content: space-between;
-		gap: 32px;
-		padding: 30px 40px 40px 50px;
-		border-radius: 10px;
+		padding: 10px;
+		border-radius: 6px;
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			gap: 32px;
+			padding: 30px 40px 40px 50px;
+			border-radius: 10px;
+		}
 	}
 
 	&__content-box {
@@ -16,7 +26,6 @@
 	}
 
 	&__title {
-		margin-bottom: 24px;
 	}
 
 	&__text {
@@ -28,8 +37,15 @@
 
 	&__nav {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 20px;
+		flex-direction: column;
+		gap: 16px;
+
+		@include tablet {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
 	}
 
 	&__nav-el {
@@ -45,6 +61,11 @@
 		font-size: 16px;
 		line-height: 20px;
 		white-space: nowrap;
+		width: 100%;
+
+		@include tablet {
+			width: unset;
+		}
 	}
 
 	&__nav-icon {
@@ -54,6 +75,12 @@
 	}
 
 	&__img-box {
+		display: none;
+		flex-shrink: 0;
+
+		@include desktop {
+			display: block;
+		}
 	}
 
 	&__img {

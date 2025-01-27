@@ -6,7 +6,7 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	@include desktop() {
+	@include desktop-xl() {
 		padding-left: 30px;
 		padding-right: 30px;
 	}

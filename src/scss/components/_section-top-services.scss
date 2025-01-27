@@ -1,9 +1,13 @@
 .section-top-services {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	@include desktop {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__title {
-		margin-bottom: 24px;
 	}
 
 	&__grid {
@@ -13,8 +17,16 @@
 		margin-bottom: 30px;
 	}
 
-	&__button-box {
+	&__btn-box {
 		display: flex;
 		justify-content: center;
+	}
+
+	&__btn {
+		width: 100%;
+
+		@include desktop {
+			width: auto;
+		}
 	}
 }

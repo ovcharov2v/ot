@@ -58,14 +58,14 @@ block content
 			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
 			+webinar("images/webinars/img1.jpg", "VR-технологии в обучении ОТ и ТБ: правовая база и производственный опыт ПАО «Северсталь»")
 		.section-top-webinars__button-box
-			a.button.button--blue(href="#") Все вебинары
+			a.button.button--blue.section-top-webinars__button(href="#") Все вебинары
 
 	// Section Advantages
 	section.section-advantages.container
 		h2.heading2.section-advantages__title Мы создаем удобство для вас
 		.section-advantages__text-box
 			p.section-advantages__text Мы сделали выбор курсов по охране труда простым, надежным и выгодным. Доверьтесь профессионалам!
-			a.button.button--blue(href="#") Перейти в каталог
+			a.button.button--blue.section-advantages__btn.section-advantages__btn--desktop(href="#") Перейти в каталог
 		.section-advantages__grid
 			// Card
 			.section-advantages__card
@@ -93,6 +93,7 @@ block content
 					+svg("asterisk")(class="section-advantages__icon")
 				h3.section-advantages__card-title Акции и выгодные предложения
 				p.section-advantages__card-text Доступ к скидкам, специальным промокодам и акциям для экономии.
+		a.button.button--blue.section-advantages__btn.section-advantages__btn--mobile(href="#") Перейти в каталог
 
 	// Section Digits
 	section.section-digits.container
@@ -136,8 +137,8 @@ block content
 			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
 			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
 			+serviceCard([['Комплексная услуга','blue'],['Организация системы охраны труда','transparent']], 'Специальная оценка условий труда (СОУТ)', [['Обязательная услуга','red'],['Долгосрочная услуга','violet'],['Онлайн','blue']])
-		.section-top-services__button-box
-			a.button.button--blue(href="#") Все услуги
+		.section-top-services__btn-box
+			a.button.button--blue.section-top-services__btn(href="#") Все услуги
 
 	// Section op Centers
 	section.section-top-centers.container
@@ -147,5 +148,5 @@ block content
 			+centerCard("images/centers/logo2.png", "Московский Институт Психологии", ['68 курсов', 'НАНО «Московский институт психологии»', 'Есть промокоды', '3328022191', '№041221 от 30.12.2020г.'])
 			+centerCard("images/centers/logo3.png", "Алгоритмика", ['15 курсов', 'ООО «Алгоритмика»', 'Есть промокоды', '3328022191', '№041369 от 15.04.2021г.'])
 			+centerCard("images/centers/logo4.png", "Skysmart", ['92 курса', 'ОАНО ДПО «СКАЕНГ»', 'Нет промокодов', '3328022191', '№Л035-01298-77/00181469 от 06.08.2019г.'])
-		.section-top-centers__button-box
-			a.button.button--blue(href="#") Все учебные центры
+		.section-top-centers__btn-box
+			a.button.button--blue.section-top-centers__btn(href="#") Все учебные центры

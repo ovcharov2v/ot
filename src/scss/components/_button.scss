@@ -51,8 +51,12 @@
 	}
 
 	&--size-big {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		border-radius: 10px;
+		border-radius: 6px;
+
+		@include desktop {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-radius: 10px;
+		}
 	}
 }

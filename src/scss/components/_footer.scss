@@ -1,30 +1,64 @@
 .footer {
 	&__nav-box {
 		padding-top: 30px;
-		padding-bottom: 86px;
+		padding-bottom: 30px;
 		background-color: #333;
 		color: #fff;
+
+		@include tablet {
+			padding-bottom: 86px;
+		}
 	}
 
 	&__nav-container {
 		display: flex;
-		justify-content: space-between;
-		gap: 50px;
+		flex-direction: column;
+		gap: 20px;
+
+		@include desktop {
+			gap: 50px;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 
 	&__nav-group {
-		display: grid;
-		grid-template: auto / repeat(3, minmax(0, 250px));
-		grid-gap: 50px
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		@include tablet {
+			display: grid;
+			grid-template: auto / repeat(3, minmax(0, 250px));
+			grid-gap: 50px;
+		}
 	}
 
 	&__text-box {
-		max-width: 315px;
+		@include tablet {
+			display: flex;
+			gap: 20px;
+		}
+
+		@include desktop {
+			display: block;
+			max-width: 315px;
+		}
 	}
 
 	&__logo-box {
+		flex-shrink: 0;
 		display: inline-block;
-		margin-bottom: 22px;
+		margin-bottom: 12px;
+		max-width: 170px;
+
+		@include desktop {
+			margin-bottom: 22px;
+		}
+
+		@include desktop-xl {
+			max-width: unset;
+		}
 	}
 
 	&__logo {
@@ -32,23 +66,55 @@
 	}
 
 	&__text {
-		margin-bottom: 20px;
+		margin-bottom: 5px;
 		font-size: 11px;
 		line-height: 13px;
 		color: #8D8D8D;
+
+		@include desktop {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__nav-title {
-		margin-bottom: 12px;
+		display: flex;
+		gap: 10px;
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 700;
+
+		@include desktop {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__nav-title-icon {
+		display: block;
+		width: 20px;
+		height: 20px;
+		transition: transform $transition-default;
+
+		.footer__nav-col--expanded & {
+			transform: rotate(-180deg);
+		}
+
+		@include tablet {
+			display: none;
+		}
 	}
 
 	&__nav-list {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		gap: 2px;
+
+		.footer__nav-col--expanded & {
+			display: block;
+		}
+
+		@include tablet {
+			display: flex;
+		}
 	}
 
 	&__nav-el {
@@ -73,14 +139,27 @@
 
 	&__bottom-nav-box {
 		display: flex;
-		justify-content: space-between;
-		gap: 50px;
+		flex-direction: column;
+		gap: 10px;
 		margin-bottom: 10px;
+
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 50px;
+		}
 	}
 
 	&__bottom-nav {
 		display: flex;
-		gap: 30px;
+		flex-direction: column;
+		gap: 10px;
+
+
+		@include tablet {
+			flex-direction: row;
+			gap: 30px;
+		}
 	}
 
 	&__bottom-nav-el {

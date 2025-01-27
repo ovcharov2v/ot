@@ -1,11 +1,15 @@
 .sort-select {
 	width: unset;
 	padding: 0;
-	border: none;
+	border: 1px solid #898989;
 	font-size: 14px;
 	line-height: 17px;
 	font-weight: 500;
 	color: #898989;
+
+	@include desktop {
+		border: none;
+	}
 
 	&__option {
 		display: flex !important;

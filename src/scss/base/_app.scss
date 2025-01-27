@@ -11,14 +11,17 @@ body {
 	min-width: 375px;
 	min-height: 100vh;
 	overflow-x: hidden;
-	padding-top: 129px;
+	padding-top: 70px;
+
+	@include desktop {
+		padding-top: 129px;
+	}
 }
 
 .main {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
 button {

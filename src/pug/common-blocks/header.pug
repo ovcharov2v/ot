@@ -41,5 +41,9 @@ mixin header()
 				li.header__action-el
 					a.header__action-link(href="#")
 						+svg("favorite")(class="header__action-icon")
+			button.header__mob-menu-btn
+				.header__menu-icon-box
+					+svg("menu")(class="header__menu-icon header__menu-icon--normal")
+					+svg("menu-close")(class="header__menu-icon header__menu-icon--active")
 		+menuCourses()
 		+menuServices()

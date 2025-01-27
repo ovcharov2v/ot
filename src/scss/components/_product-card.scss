@@ -1,12 +1,23 @@
 .product-card {
 	@include main-shadow;
-	padding: 20px 40px 30px 30px;
-	border-radius: 10px;
+	padding: 15px;
+	border-radius: 6px;
+
+	@include desktop {
+		padding: 20px 40px 30px 30px;
+		border-radius: 10px;
+	}
 
 	&__description-box {
 		display: flex;
-		justify-content: space-between;
-		gap: 30px;
+		flex-direction: column;
+		gap: 16px;
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 30px;
+		}
 	}
 
 	&__description {
@@ -30,11 +41,16 @@
 	}
 
 	&__title {
-		max-width: 940px;
 		margin-bottom: 14px;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 16px;
+		line-height: 18px;
 		font-weight: 700;
+
+		@include desktop {
+			max-width: 940px;
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 
 	&__price-box {
@@ -59,16 +75,24 @@
 
 	&__rating-box {
 		display: inline-flex;
-		flex-direction: column;
-		align-items: center;
-		padding-right: 10px;
+		flex-direction: row;
+
+		@include desktop {
+			flex-direction: column;
+			align-items: center;
+			padding-right: 10px;
+		}
 	}
 
 	&__logo {
 		display: block;
 		width: 100%;
 		max-width: 180px;
-		margin-bottom: 10px;
+		flex-shrink: 0;
+
+		@include desktop {
+			margin-bottom: 10px;
+		}
 	}
 
 	&__rating {
@@ -76,8 +100,14 @@
 
 	&__bottom-box {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		gap: 20px;
 		margin-top: 20px;
+
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 
 	&__info-list {
@@ -102,6 +132,7 @@
 	}
 
 	&__action {
+		flex-shrink: 0;
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -126,5 +157,10 @@
 	}
 
 	&__action-btn {
+		width: 100%;
+
+		@include desktop {
+			width: unset;
+		}
 	}
 }

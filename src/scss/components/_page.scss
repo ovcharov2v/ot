@@ -1,28 +1,75 @@
 .page {
-	padding-bottom: 130px;
+	padding-bottom: 60px;
+
+	@include desktop {
+		padding-bottom: 130px;
+	}
 
 	&__title {
-		margin-bottom: 40px;
+		margin-bottom: 24px;
+
+		@include desktop {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__filter-layout {
-		display: grid;
-		grid-template: auto/ 315px 1fr;
-		grid-gap: 20px;
+		@include desktop {
+			display: grid;
+			grid-template: auto/ 315px 1fr;
+			grid-gap: 20px;
+		}
 	}
 
 	&__filter {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+		padding: 70px 15px 0;
+		transform: translateX(-200vh);
+		transition: transform $transition-default;
+		overflow-x: auto;
+
+		@include desktop {
+			position: static;
+			width: 100%;
+			padding: 0;
+			transform: none;
+			transition: none;
+			overflow-x: unset;
+			height: auto;
+		}
+
+		.page--filter-show & {
+			transform: translateX(0);
+		}
 	}
 
 	&__content {
 	}
 
+	&__content-top-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
 	&__content-top {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		flex-direction: column;
+		gap: 10px;
 		margin-bottom: 20px;
+
+		@include desktop {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__result-counter {
@@ -46,20 +93,61 @@
 	}
 
 	&__webinars-grid {
-		display: grid;
-		grid-template: auto / repeat(3, minmax(0,1fr));
-		grid-gap: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 		margin-bottom: 20px;
+
+		@include tablet {
+			display: grid;
+			grid-template: auto / repeat(2, minmax(0,1fr));
+			grid-gap: 20px;
+		}
+
+		@include desktop {
+			grid-template: auto / repeat(3, minmax(0,1fr));
+		}
 	}
 
 	&__promocard-grid {
-		display: grid;
-		grid-template: auto / repeat(4, minmax(0,1fr));
-		grid-gap: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 		margin-bottom: 20px;
+
+		@include tablet {
+			display: grid;
+			grid-template: auto / repeat(2, minmax(0,1fr));
+			grid-gap: 20px;
+		}
+
+		@include desktop {
+			display: grid;
+			grid-template: auto / repeat(4, minmax(0,1fr));
+			grid-gap: 20px;
+		}
 	}
 
 	&__more-btn {
 		width: 100%;
+	}
+
+	&__filter-btn {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6px;
+		border: none;
+		border-radius: 6px;
+		background-color: #F2F4F5;
+
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__filter-btn-icon {
+		width: 18px;
+		height: 18px;
 	}
 }

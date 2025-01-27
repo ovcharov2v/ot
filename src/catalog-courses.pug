@@ -28,7 +28,10 @@ block content
 				+filterCources()
 			.page__content
 				.page__content-top
-					p.page__result-counter Найдено: 35 курсов
+					.page__content-top-wrap
+						button.page__filter-btn(type="button")
+							+svg("options").page__filter-btn-icon
+						p.page__result-counter Найдено: 35 курсов
 					select.sort-select
 						option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-asc'></use></svg> <span>По возрастанию цены</span>") По возрастанию цены
 						option.sort-select__option(data-html="<svg class='sort-select__icon'><use xlink:href='#sort-desc'></use></svg> <span>По убыванию цены</span>") По убыванию цены

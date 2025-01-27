@@ -1,15 +1,28 @@
 .section-directions {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+
+	@include desktop {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__title {
-		margin-bottom: 24px;
 	}
 
 	&__list {
 		display: grid;
-		grid-template: auto / repeat(3, minmax(0,1fr));
-		grid-gap: 20px;
+		grid-template: auto / 1fr;
+		grid-gap: 10px;
+
+		@include tablet {
+			grid-template: auto / repeat(2, minmax(0,1fr));
+		}
+
+		@include desktop {
+			grid-template: auto / repeat(3, minmax(0,1fr));
+			grid-gap: 20px;
+		}
 	}
 
 	&__el {
@@ -17,8 +30,11 @@
 
 	&__link {
 		@include main-shadow;
-		display: block;
-		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 10px;
 		font-size: 16px;
 		line-height: 20px;
 		border-radius: 6px;
@@ -28,6 +44,10 @@
 			box-shadow: none;
 			background-color: #3D4B88;
 			color: #fff;
+		}
+
+		@include desktop {
+			padding: 20px;
 		}
 	}
 }

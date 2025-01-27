@@ -6,11 +6,13 @@ mixin footer()
 				.footer__text-box
 					a.footer__logo-box(href="./main.html")
 						img.footer__logo(src="images/common/logo-white.svg", alt)
-					p.footer__text Информация о курсах и обучающих программах не является офертой, носит ознакомительный характер. Точные условия размещены на официальных сайтах школ, авторов курсов и учебных заведений.
-					p.footer__text Сайт использует файлы cookie для повышения удобства пользователей и улучшения работы сайта.
+					.footer__text-wrap
+						p.footer__text Информация о курсах и обучающих программах не является офертой, носит ознакомительный характер. Точные условия размещены на официальных сайтах школ, авторов курсов и учебных заведений.
+						p.footer__text Сайт использует файлы cookie для повышения удобства пользователей и улучшения работы сайта.
 				.footer__nav-group
 					.footer__nav-col
 						p.footer__nav-title Направления обучения
+							+svg("arrow-down").footer__nav-title-icon
 						ul.footer__nav-list
 							li.footer__nav-el
 								a.footer__nav-link(href="#") Безопасность и охрана труда
@@ -26,6 +28,7 @@ mixin footer()
 								a.footer__nav-link(href="#") Управление и менеджмент
 					.footer__nav-col
 						p.footer__nav-title Услуги
+							+svg("arrow-down").footer__nav-title-icon
 						ul.footer__nav-list
 							li.footer__nav-el
 								a.footer__nav-link(href="#") СОУТ
@@ -47,6 +50,7 @@ mixin footer()
 								a.footer__nav-link(href="#") Лицензирование и сертификация
 					.footer__nav-col
 						p.footer__nav-title Дополнительно
+							+svg("arrow-down").footer__nav-title-icon
 						ul.footer__nav-list
 							li.footer__nav-el
 								a.footer__nav-link(href="#") Рекомендуемые курсы

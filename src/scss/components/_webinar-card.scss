@@ -2,8 +2,12 @@
 	@include main-shadow;
 	display: flex;
 	flex-direction: column;
-	padding: 20px 30px 30px;
+	padding: 15px;
 	border-radius: 6px;
+
+	@include desktop {
+		padding: 20px 30px 30px;
+	}
 
 	&__img-box {
 		aspect-ratio: 3.67;
@@ -18,19 +22,29 @@
 	}
 
 	&__title {
-		margin-bottom: 20px;
+		margin-bottom: 16px;
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 700;
+
+		@include desktop {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__rating-box {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 20px;
+		flex-direction: column;
+		gap: 16px;
 		margin-top: auto;
 		margin-bottom: 20px;
+
+		@include desktop-xl {
+			flex-direction: row;
+			gap: 20px;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__logo {
@@ -40,6 +54,14 @@
 	}
 
 	&__rating {
+		flex-direction: row;
+		gap: 10px;
+		align-items: flex-start;
+
+		@include desktop-xl {
+			flex-direction: column;
+			gap: 0;
+		}
 	}
 
 	&__btn {
