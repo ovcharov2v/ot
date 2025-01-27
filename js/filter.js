@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+	const filterBtn = document.querySelector('.page__filter-btn')
+	if(filterBtn) {
+		filterBtn.addEventListener('click', () => {
+			const page = filterBtn.closest('.page')
+			if(page.classList.contains('page--filter-show')) {
+				page.classList.remove('page--filter-show')
+				document.body.style.overflow = ''
+			}
+			else {
+				page.classList.add('page--filter-show')
+				document.body.style.overflow = 'hidden'
+			}
+		})
+	}
+
+	const filterApplyBtn = document.querySelector('.filter__apply-btn')
+	if(filterApplyBtn) {
+		filterApplyBtn.addEventListener('click', () => {
+			const page = filterApplyBtn.closest('.page')
+			page.classList.remove('page--filter-show')
+			document.body.style.overflow = ''
+		})
+	}
+
 	// Filter group
 	const groupList = document.querySelectorAll('.filter__group')
 	if(groupList.length) {

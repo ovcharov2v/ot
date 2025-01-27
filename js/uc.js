@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						btn.innerText = 'Скрыть'
 					}
 
-					// ------- Костыль для обновления высота слайда
+					// ------- Костыль для обновления высоты слайда
 					const slider = filterBox.closest('.swiper')
 					if(slider) {
 						slider.style.width = `${slider.offsetWidth-.1}px`

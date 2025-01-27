@@ -97,4 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 		})
 	}
+
+	// Footer menu
+	const titleList = document.querySelectorAll('.footer__nav-title')
+	if(titleList.length) {
+		titleList.forEach((title) => {
+			title.addEventListener('click', () => {
+				const col = title.closest('.footer__nav-col')
+				col.classList.toggle('footer__nav-col--expanded')
+			})
+		})
+	}
 })
